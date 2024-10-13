@@ -20,6 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://meifif.github.io/rotem/",
   "eslintConfig": {
     "extends": [
       "react-app",
