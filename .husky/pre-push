@@ -10,3 +10,11 @@ echo "Running deploy script..."
 npm run deploy
 
 echo "Pre-push hook completed successfully!"
+
+echo "Committing changes to git..."
+
+git add -A
+git commit -m "pre commit asset"
+git push origin main
+
+echo "Changes committed to git successfully!"
