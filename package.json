@@ -19,7 +19,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "homepage": "https://meifif.github.io/rotem/",
   "eslintConfig": {
