@@ -4,7 +4,7 @@ const RotemHome = () => {
     return (
         <div className="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-primary-light to-secondary-light text-text">
             <div className="bg-white bg-opacity-80 p-8 rounded-lg shadow-xl max-w-2xl">
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 text-pink-500 font-secondary">Rotem</h1>
+                <h1 className="text-4xl md:text-6xl font-bold mb-6 text-pink-500 font-secondary">ROTEM IFRACH</h1>
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 text-pink-500 font-secondary">Makeup Artist</h1>
                 <p className="text-xl md:text-2xl mb-8 text-text">
                     רותם יפרח |
