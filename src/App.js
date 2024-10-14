@@ -4,10 +4,12 @@ import About from './components/About';
 import Services from './components/Services';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import SEO from "./components/SEO";
 
 const App = () => {
     return (
         <div dir="rtl" className="font-primary text-right bg-background text-text">
+            <SEO/>
             <Navbar/>
             <main>
                 <section id="home" className="py-20">
