@@ -5,14 +5,14 @@
 @tailwind utilities;
 
 :root {
-    --color-primary: #8B5CF6;  /* purple-500 */
-    --color-primary-light: #C4B5FD;  /* purple-300 */
-    --color-secondary: #EC4899;  /* pink-500 */
-    --color-secondary-light: #F9A8D4;  /* pink-300 */
-    --color-background: #FAF5FF;  /* purple-50 */
-    --color-text: #1F2937;  /* gray-800 */
+    --color-primary: #EC4899; /* pink-500 */
+    --color-primary-light: #F9A8D4; /* pink-300 */
+    --color-secondary: #F472B6; /* pink-400 */
+    --color-secondary-light: #FCE7F3; /* pink-100 */
+    --color-background: #FDF2F8; /* pink-50 */
+    --color-text: #1F2937; /* gray-800 */
     --font-primary: 'Heebo', sans-serif;
-    --font-secondary: 'Heebo', serif;
+    --font-secondary: 'Heebo', sans-serif; /* Changed to sans-serif as both are now Heebo */
 }
 
 body {

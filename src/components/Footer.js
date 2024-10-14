@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import {Facebook, Instagram, Mail, MapPin, Phone} from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -9,36 +9,44 @@ const Footer = () => {
                     <nav>
                         <h3 className="font-semibold text-lg mb-4">ניווט מהיר</h3>
                         <ul className="space-y-2">
-                            <li><a href="#home" className="hover:text-secondary-light transition duration-300">בית</a></li>
-                            <li><a href="#about" className="hover:text-secondary-light transition duration-300">אודות</a></li>
-                            <li><a href="#services" className="hover:text-secondary-light transition duration-300">שירותים</a></li>
-                            <li><a href="#testimonials" className="hover:text-secondary-light transition duration-300">המלצות</a></li>
+                            <li><a href="#home" className="hover:text-secondary-light transition duration-300">בית</a>
+                            </li>
+                            <li><a href="#about"
+                                   className="hover:text-secondary-light transition duration-300">אודות</a></li>
+                            <li><a href="#services"
+                                   className="hover:text-secondary-light transition duration-300">שירותים</a></li>
+                            <li><a href="#testimonials"
+                                   className="hover:text-secondary-light transition duration-300">המלצות</a></li>
                         </ul>
                     </nav>
 
                     <div>
                         <h3 className="font-semibold text-lg mb-4">צרו קשר</h3>
                         <p className="flex items-center mb-2">
-                            <Phone className="ml-2" size={18} /> 053-2509989
+                            <Phone className="ml-2" size={18}/> 053-2509989
                         </p>
                         <p className="flex items-center mb-2">
-                            <Mail className="ml-2" size={18} /> rotemshuman@gmail.com
+                            <Mail className="ml-2" size={18}/> rotemshuman@gmail.com
                         </p>
                         <div className="flex space-x-4 mt-4 ">
-                            <a href="#" aria-label="Facebook" className="text-white hover:text-secondary-light transition duration-300"><Facebook size={24} /></a>
-                            <a href="#" aria-label="Instagram" className="text-white hover:text-secondary-light transition duration-300"><Instagram size={24} /></a>
+                            <a href="#" aria-label="Facebook"
+                               className="text-white hover:text-secondary-light transition duration-300"><Facebook
+                                size={24}/></a>
+                            <a href="#" aria-label="Instagram"
+                               className="text-white hover:text-secondary-light transition duration-300"><Instagram
+                                size={24}/></a>
                         </div>
                     </div>
 
                     <div>
                         <h3 className="font-semibold text-lg mb-4">כתובת</h3>
                         <p className="flex items-start">
-                            <MapPin className="ml-2 mt-1 flex-shrink-0" size={18} />
+                            <MapPin className="ml-2 mt-1 flex-shrink-0" size={18}/>
                             <span>
-                רחוב צבי גרינברג<br />
-                חולון, <br />
-                ישראל
-              </span>
+                                רחוב צבי גרינברג<br/>
+                                חולון, <br/>
+                                ישראל
+                            </span>
                         </p>
                     </div>
                 </div>
