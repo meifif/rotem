@@ -1,4 +1,12 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run predeploy && npm run deploy
+echo "Running pre-push hook: Building and deploying site..."
+
+echo "Running predeploy script..."
+npm run predeploy
+
+echo "Running deploy script..."
+npm run deploy
+
+echo "Pre-push hook completed successfully!"
