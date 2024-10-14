@@ -29,15 +29,14 @@ const Footer = () => {
                             <Mail className="ml-2" size={18}/> rotemshuman@gmail.com
                         </p>
                         <div className="flex space-x-4 mt-4 ">
-                            <a href="#" aria-label="Facebook"
+                            <a href="https://www.facebook.com/rotemifrachs" aria-label="Facebook"
                                className="text-white hover:text-secondary-light transition duration-300"><Facebook
                                 size={24}/></a>
-                            <a href="#" aria-label="Instagram"
+                            <a href="https://www.instagram.com/rotemifrachs/" aria-label="Instagram"
                                className="text-white hover:text-secondary-light transition duration-300"><Instagram
                                 size={24}/></a>
                         </div>
                     </div>
-
                     <div>
                         <h3 className="font-semibold text-lg mb-4">כתובת</h3>
                         <p className="flex items-start">
