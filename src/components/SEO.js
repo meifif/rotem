@@ -6,7 +6,8 @@ const SEO = () => {
             <title>רותם איפרח - אמנית איפור מקצועית בחולון</title>
             <meta name="description"
                   content="רותם איפרח, אמנית איפור מקצועית בחולון. מתמחה באיפור כלות, איפור ערב, עיצוב גבות והסרת שיער. הזמינו תור עכשיו!"/>
-            <meta name="keywords" content="איפור, אמנית איפור, איפור כלות, איפור ערב, עיצוב גבות, הסרת שיער, חולון"/>
+            <meta name="keywords"
+                  content="איפור, אמנית איפור, איפור כלות, איפור ערב, עיצוב גבות, הסרת שיער, חולון"/>
             <link rel="canonical" href="https://meifif.github.io/rotem/"/>
             <meta property="og:title" content="רותם איפרח - אמנית איפור מקצועית בחולון"/>
             <meta property="og:description"
