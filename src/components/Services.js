@@ -1,45 +1,64 @@
-import React from 'react';
-import { Sparkles, Heart, Moon, Scissors } from 'lucide-react';
+import React, {useState} from 'react';
+import {Book, Heart, Moon, Sparkles} from 'lucide-react';
+import BridalMakeup from './services/BridalMakeup';
+import EveningMakeup from './services/EveningMakeup';
+import EyebrowStyling from './services/EyebrowStyling';
+import PersonalMakeupWorkshop from './services/PersonalMakeupWorkshop';
 
-const ServiceCard = ({ title, description, icon: Icon }) => (
-    <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 text-pink-300">
-        <Icon className="text-primary w-12 h-12 mb-4 text-pink-200" />
-        <h3 className="text-2xl font-semibold mb-4 text-primary text-pink-400">{title}</h3>
-        <p className="text-text">{description}</p>
-    </div>
+const ServiceButton = ({title, icon: Icon, isActive, onClick}) => (
+    <button
+        className={`flex items-center p-4 rounded-lg ${
+            isActive ? 'bg-pink-500 text-white' : 'bg-white text-pink-500'
+        } hover:bg-pink-400 hover:text-white transition duration-300`}
+        onClick={onClick}
+    >
+        <Icon className="w-6 h-6 mr-2"/>
+        <span>{title}</span>
+    </button>
 );
 
 const Services = () => {
+    const [activeService, setActiveService] = useState('bridal');
+
     const services = [
-        {
-            title: 'איפור כלות',
-            description: 'איפור מושלם ליום המיוחד שלך, עמיד לאורך כל היום והלילה.',
-            icon: Sparkles
-        },
-        {
-            title: 'איפור ערב',
-            description: 'מראה מרהיב לכל אירוע מיוחד, מותאם לסגנון ולשמלה שלך.',
-            icon: Moon
-        },
-        {
-            title: 'עיצוב גבות',
-            description: 'עיצוב וטיפוח גבות להשלמת המראה שלך ולהדגשת תווי הפנים.',
-            icon: Heart
-        },
-        {
-            title: 'הסרת שיער',
-            description: 'הסרת שיער עדינה ומקצועית לפנים, כולל טיפול בשפם ובפאות.',
-            icon: Scissors
-        }
+        {id: 'bridal', title: 'איפור כלות', icon: Sparkles},
+        {id: 'evening', title: 'איפור ערב', icon: Moon},
+        {id: 'eyebrow', title: 'עיצוב גבות', icon: Heart},
+        {id: 'workshop', title: 'סדנת איפור אישי', icon: Book},
     ];
 
+    const renderActiveService = () => {
+        switch (activeService) {
+            case 'bridal':
+                return <BridalMakeup/>;
+            case 'evening':
+                return <EveningMakeup/>;
+            case 'eyebrow':
+                return <EyebrowStyling/>;
+            case 'workshop':
+                return <PersonalMakeupWorkshop/>;
+            default:
+                return null;
+        }
+    };
+
     return (
-        <div className="container mx-auto px-4 py-16 bg-gradient-to-r from-primary-light to-secondary-light ">
-            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-primary font-secondary text-pink-500">השירותים שלי</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {services.map((service, index) => (
-                    <ServiceCard key={index} {...service} />
+        <div className="container mx-auto px-4 py-16 bg-pink-50">
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-pink-500 font-secondary">השירותים
+                שלי</h2>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+                {services.map((service) => (
+                    <ServiceButton
+                        key={service.id}
+                        title={service.title}
+                        icon={service.icon}
+                        isActive={activeService === service.id}
+                        onClick={() => setActiveService(service.id)}
+                    />
                 ))}
+            </div>
+            <div className="mt-8">
+                {renderActiveService()}
             </div>
         </div>
     );

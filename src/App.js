@@ -4,6 +4,8 @@ import About from './components/About';
 import Services from './components/Services';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const App = () => {
     return (
