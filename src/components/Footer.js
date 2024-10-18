@@ -1,5 +1,5 @@
 import React from 'react';
-import {Facebook, Instagram, Mail, MapPin, Phone} from 'lucide-react';
+import {Facebook, Instagram, Mail, MapPin, MessageCircle, Phone} from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -28,7 +28,10 @@ const Footer = () => {
                         <p className="flex items-center mb-2">
                             <Mail className="ml-2" size={18}/> <a
                             href="mailto:rotemshuman@gmail.com">rotemshuman@gmail.com </a>
-                        </p>
+                        </p>                        <p className="flex items-center mb-2">
+                        <MessageCircle className="ml-2" size={18}/> <a
+                        href="https://wa.link/j96v07">Whatsapp </a>
+                    </p>
                         <div className="flex space-x-4 mt-4 ">
                             <a href="https://www.facebook.com/rotemifrachs" aria-label="Facebook"
                                className="text-white hover:text-secondary-light transition duration-300"><Facebook

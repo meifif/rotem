@@ -1,4 +1,5 @@
 import React from 'react';
+import {MessageCircle, Phone} from 'lucide-react';
 
 const RotemHome = () => {
     return (
@@ -28,13 +29,22 @@ const RotemHome = () => {
                         className="bg-pink-200 text-black px-3 py-1 rounded-full text-sm font-semibold">עיצוב גבות</span>
                     <span
                         className="bg-pink-200 text-black px-3 py-1 rounded-full text-sm font-semibold">הסרת שיער פנים</span>
+                    <span className="bg-pink-200 text-black px-3 py-1 rounded-full text-sm font-semibold">סדנת איפור אישי</span>
                 </div>
-                <a href="https://wa.link/j96v07" target="_blank" rel="noreferrer">
+                <div className="flex justify-center space-x-4 rtl:space-x-reverse">
+                    <a href="https://wa.link/j96v07" target="_blank" rel="noreferrer">
+                        <button
+                            className="bg-pink-300 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105 flex items-center">
+                            <MessageCircle className="ml-2" size={24}/>
+                            קבעי תור
+                        </button>
+                    </a>
                     <button
-                        className="bg-pink-300 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105">
-                        קבעי תור עכשיו
+                        className="bg-pink-300 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105 flex items-center">
+                        <Phone className="ml-2" size={24}/>
+                        צרי קשר
                     </button>
-                </a>
+                </div>
             </div>
         </div>
     );
