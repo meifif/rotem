@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/rotem/static/css/main.40d3ec96.css",
-    "main.js": "/rotem/static/js/main.4fb97bf7.js",
+    "main.js": "/rotem/static/js/main.00bc2040.js",
     "static/js/453.347936ad.chunk.js": "/rotem/static/js/453.347936ad.chunk.js",
-    "static/media/IMG_9439.jpg": "/rotem/static/media/IMG_9439.5f23f88cb4c65c15f1f8.jpg",
+    "static/media/rotem.jpg": "/rotem/static/media/rotem.16f7862557a5c7344326.jpg",
     "index.html": "/rotem/index.html",
     "main.40d3ec96.css.map": "/rotem/static/css/main.40d3ec96.css.map",
-    "main.4fb97bf7.js.map": "/rotem/static/js/main.4fb97bf7.js.map",
+    "main.00bc2040.js.map": "/rotem/static/js/main.00bc2040.js.map",
     "453.347936ad.chunk.js.map": "/rotem/static/js/453.347936ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.40d3ec96.css",
-    "static/js/main.4fb97bf7.js"
+    "static/js/main.00bc2040.js"
   ]
 }
