@@ -23,10 +23,11 @@ const Footer = () => {
                     <div>
                         <h3 className="font-semibold text-lg mb-4">צרו קשר</h3>
                         <p className="flex items-center mb-2">
-                            <Phone className="ml-2" size={18}/> 053-2509989
+                            <Phone className="ml-2" size={18}/> <a href="tel:053-2509989"> 053-2509989</a>
                         </p>
                         <p className="flex items-center mb-2">
-                            <Mail className="ml-2" size={18}/> rotemshuman@gmail.com
+                            <Mail className="ml-2" size={18}/> <a
+                            href="mailto:rotemshuman@gmail.com">rotemshuman@gmail.com </a>
                         </p>
                         <div className="flex space-x-4 mt-4 ">
                             <a href="https://www.facebook.com/rotemifrachs" aria-label="Facebook"
