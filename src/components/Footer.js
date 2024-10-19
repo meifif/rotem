@@ -1,5 +1,6 @@
 import React from 'react';
-import {Facebook, Instagram, Mail, MapPin, MessageCircle, Phone} from 'lucide-react';
+import {Mail, MapPin, MessageCircle, Phone} from 'lucide-react';
+import SocialMediaSection from "./SocialMediaSection";
 
 const Footer = () => {
     return (
@@ -30,14 +31,7 @@ const Footer = () => {
                         <MessageCircle className="ml-2" size={18}/> <a
                         href="https://wa.link/j96v07">Whatsapp </a>
                     </p>
-                        <div className="flex space-x-4 mt-4 ">
-                            <a href="https://www.facebook.com/rotemifrachs" aria-label="Facebook"
-                               className="text-white hover:text-secondary-light transition duration-300"><Facebook
-                                size={24}/></a>
-                            <a href="https://www.instagram.com/rotemifrachs/" aria-label="Instagram"
-                               className="text-white hover:text-secondary-light transition duration-300"><Instagram
-                                size={24}/></a>
-                        </div>
+                        <SocialMediaSection/>
                     </div>
                     <div>
                         <h3 className="font-semibold text-lg mb-4">כתובת</h3>
