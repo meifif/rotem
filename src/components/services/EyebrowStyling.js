@@ -87,6 +87,14 @@ const EyebrowStyling = () => {
                     />
                 </div>
             </div>
+            <div className="mt-10 text-center">
+                <a href="https://wa.link/bpxxhn" target="_blank" rel="noreferrer">
+                    <button
+                        className="bg-pink-500 text-white font-bold py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300">
+                        הזמיני תור לעיצוב גבות
+                    </button>
+                </a>
+            </div>
         </div>
     );
 };
