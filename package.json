@@ -25,7 +25,7 @@
     "deploy": "gh-pages -d build",
     "prepare": "husky"
   },
-  "homepage": "https://meifif.github.io/rotem/",
+  "homepage": "https://rotem-ifrach.co",
   "eslintConfig": {
     "extends": [
       "react-app",
