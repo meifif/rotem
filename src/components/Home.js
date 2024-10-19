@@ -1,5 +1,5 @@
 import React from 'react';
-import {MessageCircle, Phone} from 'lucide-react';
+import {MessageCircle, Phone, Star} from 'lucide-react';
 
 const RotemHome = () => {
     return (
@@ -19,18 +19,21 @@ const RotemHome = () => {
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 text-pink-500 font-secondary">ROTEM IFRACH</h1>
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 text-pink-500 font-secondary">Makeup Artist</h1>
                 <p className="text-xl md:text-2xl mb-8 text-text">
-                    רותם יפרח |
-                    מאפרת מקצועית ומעצבת גבות
+                    רותם יפרח | מאפרת מקצועית ומעצבת גבות
                 </p>
-                <div className="flex flex-wrap justify-center gap-3 mb-8">
-                    <span
-                        className="bg-pink-200 text-black px-3 py-1 rounded-full text-sm font-semibold">איפור Beauty</span>
-                    <span
-                        className="bg-pink-200 text-black px-3 py-1 rounded-full text-sm font-semibold">עיצוב גבות</span>
-                    <span
-                        className="bg-pink-200 text-black px-3 py-1 rounded-full text-sm font-semibold">הסרת שיער פנים</span>
-                    <span className="bg-pink-200 text-black px-3 py-1 rounded-full text-sm font-semibold">סדנת איפור אישי</span>
+
+                {/* Redesigned services list */}
+                <div className="mb-8 flex flex-col items-center">
+                    <ul className="text-lg">
+                        {['איפור Beauty', 'עיצוב גבות ושפם', 'סדנת איפור אישי'].map((service, index) => (
+                            <li key={index} className="flex items-center mb-2">
+                                <Star size={16} className="text-pink-400 mr-2 ml-2"/>
+                                <span>{service}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
+
                 <div className="flex justify-center space-x-4 rtl:space-x-reverse">
                     <a href="https://wa.link/j96v07" target="_blank" rel="noreferrer">
                         <button
