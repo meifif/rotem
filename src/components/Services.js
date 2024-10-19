@@ -23,7 +23,7 @@ const Services = () => {
     const services = [
         {id: 'bridal', title: 'איפור כלות', icon: Sparkles},
         {id: 'evening', title: 'איפור ערב', icon: Moon},
-        {id: 'eyebrow', title: 'עיצוב גבות', icon: Heart},
+        {id: 'eyebrow', title: 'עיצוב גבות ושפם', icon: Heart},
         {id: 'workshop', title: 'סדנת איפור אישי', icon: Book},
     ];
 
@@ -57,8 +57,19 @@ const Services = () => {
                     />
                 ))}
             </div>
-            <div className="mt-8">
+            <div className="mt-8 mb-8">
                 {renderActiveService()}
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+                {services.map((service) => (
+                    <ServiceButton
+                        key={service.id}
+                        title={service.title}
+                        icon={service.icon}
+                        isActive={activeService === service.id}
+                        onClick={() => setActiveService(service.id)}
+                    />
+                ))}
             </div>
         </div>
     );
