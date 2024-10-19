@@ -15,8 +15,6 @@ const Footer = () => {
                                    className="hover:text-secondary-light transition duration-300">אודות</a></li>
                             <li><a href="#services"
                                    className="hover:text-secondary-light transition duration-300">שירותים</a></li>
-                            <li><a href="#testimonials"
-                                   className="hover:text-secondary-light transition duration-300">המלצות</a></li>
                         </ul>
                     </nav>
 

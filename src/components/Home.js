@@ -39,11 +39,13 @@ const RotemHome = () => {
                             קבעי תור
                         </button>
                     </a>
-                    <button
-                        className="bg-pink-300 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105 flex items-center">
+                    <a
+                        href="tel:053-2509989"
+                        className="bg-pink-300 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105 flex items-center no-underline"
+                    >
                         <Phone className="ml-2" size={24}/>
                         צרי קשר
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
