@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {Mail, MapPin, MessageCircle, Phone} from 'lucide-react';
 import SocialMediaSection from "./SocialMediaSection";
 
@@ -10,11 +11,11 @@ const Footer = () => {
                     <nav>
                         <h3 className="font-semibold text-lg mb-4">ניווט מהיר</h3>
                         <ul className="space-y-2">
-                            <li><a href="#home" className="hover:text-secondary-light transition duration-300">בית</a>
+                            <li><a href="/#home" className="hover:text-secondary-light transition duration-300">בית</a>
                             </li>
-                            <li><a href="#about"
+                            <li><a href="/#about"
                                    className="hover:text-secondary-light transition duration-300">אודות</a></li>
-                            <li><a href="#services"
+                            <li><a href="/#services"
                                    className="hover:text-secondary-light transition duration-300">שירותים</a></li>
                         </ul>
                     </nav>
@@ -26,13 +27,14 @@ const Footer = () => {
                         </p>
                         <p className="flex items-center mb-2">
                             <Mail className="ml-2" size={18}/> <a
-                            href="mailto:rotemshuman@gmail.com">rotemshuman@gmail.com </a>
-                        </p>                        <p className="flex items-center mb-2">
-                        <MessageCircle className="ml-2" size={18}/> <a
-                        href="https://wa.link/j96v07">Whatsapp </a>
-                    </p>
+                            href="mailto:rotemshuman@gmail.com">rotemshuman@gmail.com</a>
+                        </p>
+                        <p className="flex items-center mb-2">
+                            <MessageCircle className="ml-2" size={18}/> <a href="https://wa.link/j96v07">Whatsapp</a>
+                        </p>
                         <SocialMediaSection/>
                     </div>
+
                     <div>
                         <h3 className="font-semibold text-lg mb-4">כתובת</h3>
                         <p className="flex items-start">
@@ -44,6 +46,11 @@ const Footer = () => {
                             </span>
                         </p>
                     </div>
+                </div>
+
+                <div className="mt-4 text-center">
+                    <Link to="/accessibility" className="text-secondary-light hover:text-white transition duration-300">הצהרת
+                        נגישות</Link>
                 </div>
 
                 <div className="mt-8 pt-8 border-t border-white/20 text-center">
