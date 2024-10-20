@@ -34,20 +34,21 @@ const RotemHome = () => {
                     </ul>
                 </div>
 
-                <div className="flex justify-center space-x-4 rtl:space-x-reverse">
-                    <a href="https://wa.link/j96v07" target="_blank" rel="noreferrer">
+                <div
+                    className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
+                    <a href="https://wa.link/j96v07" target="_blank" rel="noreferrer" className="inline-block">
                         <button
-                            className="bg-pink-300 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105 flex items-center">
-                            <MessageCircle className="ml-2" size={24}/>
-                            קבעי תור
+                            className="bg-pink-300 text-white px-4 sm:px-6 md:px-8 py-3 rounded-full text-lg sm:text-base font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105 flex items-center justify-center w-full sm:w-auto">
+                            <MessageCircle className="ml-2 flex-shrink-0" size={24}/>
+                            <span className="whitespace-nowrap">קבעי תור</span>
                         </button>
                     </a>
-                    <a
-                        href="tel:053-2509989"
-                        className="bg-pink-300 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105 flex items-center no-underline"
-                    >
-                        <Phone className="ml-2" size={24}/>
-                        צרי קשר
+                    <a href="tel:053-2509989" className="inline-block">
+                        <button
+                            className="bg-pink-300 text-white px-4 sm:px-6 md:px-8 py-3 rounded-full text-lg sm:text-base font-semibold hover:bg-secondary transition duration-300 transform hover:scale-105 flex items-center justify-center w-full sm:w-auto">
+                            <Phone className="ml-2 flex-shrink-0" size={24}/>
+                            <span className="whitespace-nowrap">צרי קשר</span>
+                        </button>
                     </a>
                 </div>
             </div>
