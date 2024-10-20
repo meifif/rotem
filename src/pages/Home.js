@@ -12,15 +12,15 @@ const Home = () => {
         <div dir="rtl" className="font-primary text-right bg-background text-text">
             <Navbar/>
             <main>
-                <section id="home" className="py-20">
+                <section id="home" className="py-10">
                     <RotemHome/>
                 </section>
 
-                <section id="about" className="py-20">
+                <section id="about" className="py-10">
                     <About/>
                 </section>
 
-                <section id="services" className="py-20">
+                <section id="services" className="py-10">
                     <Services/>
                 </section>
             </main>
