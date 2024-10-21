@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {Book, Heart, Moon, Sparkles} from 'lucide-react';
 import BridalMakeup from './services/BridalMakeup';
 import EveningMakeup from './services/EveningMakeup';
@@ -19,6 +19,7 @@ const ServiceButton = ({title, icon: Icon, isActive, onClick}) => (
 
 const Services = () => {
     const [activeService, setActiveService] = useState('bridal');
+    const servicesRef = useRef(null);
 
     const services = [
         {id: 'bridal', title: 'איפור כלות', icon: Sparkles},
@@ -26,6 +27,13 @@ const Services = () => {
         {id: 'eyebrow', title: 'עיצוב גבות ושפם', icon: Heart},
         {id: 'workshop', title: 'סדנת איפור אישי', icon: Book},
     ];
+
+    const handleServiceClick = (serviceId) => {
+        setActiveService(serviceId);
+        if (servicesRef.current) {
+            servicesRef.current.scrollIntoView({behavior: 'smooth'});
+        }
+    };
 
     const renderActiveService = () => {
         switch (activeService) {
@@ -43,7 +51,7 @@ const Services = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-16 bg-pink-50">
+        <div className="container mx-auto px-4 py-16 bg-pink-50" ref={servicesRef}>
             <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-pink-500 font-secondary">השירותים
                 שלי</h2>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -53,7 +61,7 @@ const Services = () => {
                         title={service.title}
                         icon={service.icon}
                         isActive={activeService === service.id}
-                        onClick={() => setActiveService(service.id)}
+                        onClick={() => handleServiceClick(service.id)}
                     />
                 ))}
             </div>
@@ -67,7 +75,7 @@ const Services = () => {
                         title={service.title}
                         icon={service.icon}
                         isActive={activeService === service.id}
-                        onClick={() => setActiveService(service.id)}
+                        onClick={() => handleServiceClick(service.id)}
                     />
                 ))}
             </div>
