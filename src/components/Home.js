@@ -19,7 +19,7 @@ const RotemHome = () => {
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 text-pink-500 font-secondary">ROTEM IFRACH</h1>
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 text-pink-500 font-secondary">Makeup Artist</h1>
                 <p className="text-xl md:text-2xl mb-8 text-text">
-                    רותם יפרח | מאפרת מקצועית ומעצבת גבות
+                    רותם יפרח | מאפרת מקצועית | מעצבת גבות
                 </p>
 
                 {/* Redesigned services list */}
@@ -53,7 +53,8 @@ const RotemHome = () => {
                 </div>
             </div>
         </div>
-    );
+    )
+        ;
 };
 
 export default RotemHome;
