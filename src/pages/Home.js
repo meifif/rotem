@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import WorkSlider from "../components/WorkSlider";
 
 const Home = () => {
     return (
@@ -15,7 +16,9 @@ const Home = () => {
                 <section id="home" className="py-10">
                     <RotemHome/>
                 </section>
-
+                <section id="work" className="py-10">
+                    <WorkSlider/>
+                </section>
                 <section id="about" className="py-10">
                     <About/>
                 </section>
