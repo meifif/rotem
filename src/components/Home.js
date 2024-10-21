@@ -19,7 +19,8 @@ const RotemHome = () => {
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 text-pink-500 font-secondary">ROTEM IFRACH</h1>
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 text-pink-500 font-secondary">Makeup Artist</h1>
                 <p className="text-xl md:text-2xl mb-8 text-text">
-                    רותם יפרח | מאפרת מקצועית | מעצבת גבות
+                    רותם יפרח | מאפרת מקצועית |{' '}
+                    <span className="whitespace-nowrap">מעצבת גבות</span>
                 </p>
 
                 {/* Redesigned services list */}
