@@ -4,7 +4,7 @@ import {MessageCircle, Phone, Star} from 'lucide-react';
 const RotemHome = () => {
     return (
         <div
-            className="min-h-screen flex flex-col justify-center items-center text-center bg-pink-50 text-text relative p-4">
+            className=" flex flex-col justify-center items-center text-center bg-pink-50 text-text relative p-4">
             {/* Pattern overlay */}
             <div
                 className="absolute inset-0 z-0 opacity-10"

@@ -9,7 +9,7 @@ const WorkSlider = () => {
     useEffect(() => {
         const importAll = (r) => r.keys().map(r);
         const loadImages = async () => {
-            const imageContextBM = require.context('../assets/portfolio', false, /\.(png|jpe?g|svg)$/);
+            const imageContextBM = require.context('../assets/main-slide', false, /\.(png|jpe?g|svg)$/);
             const loadedImages = importAll(imageContextBM);
             setImages(loadedImages);
         };
@@ -26,6 +26,8 @@ const WorkSlider = () => {
         centerMode: true,
         centerPadding: '0',
         adaptiveHeight: true,
+        dots: true,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 768,
