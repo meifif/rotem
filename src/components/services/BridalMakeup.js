@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import a from '../../img/bridal-makeup/a.jpg';
 import b from '../../img/bridal-makeup/b.jpg';
+import d from '../../img/bridal-makeup/d.jpg';
 import {Clock, Heart, Sparkles, Star} from 'lucide-react';
 
 const BridalMakeup = () => {
@@ -30,7 +31,7 @@ const BridalMakeup = () => {
 
     // Replace these with actual image URLs
     const images = [
-        a, b
+        a, b,d
     ];
 
     const FeatureItem = ({icon: Icon, title, description}) => (
