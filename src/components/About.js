@@ -1,5 +1,5 @@
 import React from 'react';
-import rotemImage from '../img/rotem.jpg'; // Import the image
+import rotemImage from '../img/rotem.jpg';
 
 const About = () => {
     return (
@@ -13,7 +13,7 @@ const About = () => {
                 </div>
                 <div className="md:w-1/2 md:pr-12">
                     <p className="text-lg mb-6 leading-relaxed text-text">
-                        שלום, אני רותם יפרח - אמנית איפור מקצועית עם ניסיון של למעלה מ-10 שנים בתחום. אני מאמינה שאיפור
+                        שלום, אני רותם יפרח - אמנית איפור מקצועית עם ניסיון של למעלה מ-10 שנים בתחום, בוגרת ירין שחף ורוית אסף. אני מאמינה שאיפור
                         הוא אומנות שמשלבת יצירתיות, טכניקה וקסם.
                     </p>
                     <p className="text-lg mb-6 leading-relaxed text-text">
