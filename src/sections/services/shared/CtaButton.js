@@ -1,6 +1,5 @@
 import React from 'react';
 import WhatsAppIcon from "../../../utile/WhatsAppIcon";
-import a from "../../../img/bridal-makeup/a.jpg";
 
 const CtaButton = ({text, link, className = ""}) => {
     return (
