@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Home} from 'lucide-react';
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../sections/Navbar";
+import Footer from "../sections/Footer";
 
 const NotFound = () => {
     return (

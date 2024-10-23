@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {Droplet, Ruler, Scissors, Smile} from 'lucide-react';
+import CtaButton from "./shared/CtaButton";
 
 // Import your images statically
 /*import image1 from '../img/eyebrow/image1.jpg';
@@ -87,13 +88,11 @@ const EyebrowStyling = () => {
                     />
                 </div>
             </div>
-            <div className="mt-10 text-center">
-                <a href="https://wa.link/bpxxhn" target="_blank" rel="noreferrer">
-                    <button
-                        className="bg-pink-500 text-white font-bold py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300">
-                        הזמיני תור לעיצוב גבות
-                    </button>
-                </a>
+            <div className="mt-10 text-center flex justify-center">
+                <CtaButton
+                    link="https://wa.link/bpxxhn"
+                    text="הזמיני תור לעיצוב גבות"
+                />
             </div>
         </div>
     );

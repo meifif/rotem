@@ -8,6 +8,7 @@ import {Clock, Eye, Feather, Palette} from 'lucide-react';
 import a from '../../img/evening-makeup/a.jpg';
 import b from '../../img/evening-makeup/b.jpg';
 import c from '../../img/evening-makeup/c.jpg';
+import CtaButton from "./shared/CtaButton";
 
 const FeatureItem = ({icon: Icon, title, description}) => (
     <div className="flex items-start space-x-4 mb-6">
@@ -103,13 +104,11 @@ const EveningMakeup = () => {
                     />
                 </div>
             </div>
-            <div className="mt-10 text-center">
-                <a href="https://wa.link/rkh2jz" target="_blank" rel="noreferrer">
-                    <button
-                        className="bg-pink-500 text-white font-bold py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300">
-                        הזמיני תור לאיפור ערב
-                    </button>
-                </a>
+            <div className="mt-10 text-center flex justify-center">
+                <CtaButton
+                    link="https://wa.link/rkh2jz"
+                    text="הזמיני תור לאיפור ערב"
+                />
             </div>
         </div>
     );

@@ -6,6 +6,7 @@ import a from '../../img/bridal-makeup/a.jpg';
 import b from '../../img/bridal-makeup/b.jpg';
 import d from '../../img/bridal-makeup/d.jpg';
 import {Clock, Heart, Sparkles, Star} from 'lucide-react';
+import CtaButton from "./shared/CtaButton";
 
 const BridalMakeup = () => {
     const portraitSliderSettings = {
@@ -31,7 +32,7 @@ const BridalMakeup = () => {
 
     // Replace these with actual image URLs
     const images = [
-        a, b,d
+        a, b, d
     ];
 
     const FeatureItem = ({icon: Icon, title, description}) => (
@@ -102,13 +103,11 @@ const BridalMakeup = () => {
                     />
                 </div>
             </div>
-            <div className="mt-10 text-center">
-                <a href="https://wa.link/mzj1ct" target="_blank" rel="noreferrer">
-                    <button
-                        className="bg-pink-500 text-white font-bold py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300">
-                        הזמיני תור לאיפור כלות
-                    </button>
-                </a>
+            <div className="mt-10 text-center flex justify-center">
+                <CtaButton
+                    link="https://wa.link/i9ytqc"
+                    text="הזמיני תור לאיפור כלות"
+                />
             </div>
         </div>
     );

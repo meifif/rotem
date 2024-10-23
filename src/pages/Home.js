@@ -1,12 +1,12 @@
 import React from 'react';
-import RotemHome from '../components/Home';
-import About from '../components/About';
-import Services from '../components/Services';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import RotemHome from '../sections/Home';
+import About from '../sections/About';
+import Services from '../sections/Services';
+import Footer from '../sections/Footer';
+import Navbar from '../sections/Navbar';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import WorkSlider from "../components/WorkSlider";
+import WorkSlider from "../sections/WorkSlider";
 
 const Home = () => {
     return (

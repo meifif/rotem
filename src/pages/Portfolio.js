@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {LazyLoadImage} from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../sections/Navbar";
+import Footer from "../sections/Footer";
 import Modal from 'react-modal';
 
 Modal.setAppElement('#root');

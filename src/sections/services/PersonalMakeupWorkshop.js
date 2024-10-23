@@ -7,6 +7,7 @@ import {Award, Book, Palette, Users} from 'lucide-react';
 // Import your images statically
 import image1 from '../../img/personal-makeup-workshop/image1.jpg';
 import image2 from '../../img/personal-makeup-workshop/image2.jpg';
+import CtaButton from "./shared/CtaButton";
 
 const FeatureItem = ({icon: Icon, title, description}) => (
     <div className="flex items-start space-x-4 mb-6">
@@ -93,13 +94,11 @@ const PersonalMakeupWorkshop = () => {
                     />
                 </div>
             </div>
-            <div className="mt-10 text-center">
-                <a href="https://wa.link/kmuzm5" target="_blank" rel="noreferrer">
-                    <button
-                        className="bg-pink-500 text-white font-bold py-3 px-6 rounded-full hover:bg-pink-600 transition duration-300">
-                        הזמיני סדנת איפור אישית
-                    </button>
-                </a>
+            <div className="mt-10 text-center flex justify-center">
+                <CtaButton
+                    link="https://wa.link/kmuzm5"
+                    text="הזמיני סדנת איפור אישית"
+                />
             </div>
         </div>
     );
