@@ -8,12 +8,13 @@ const About = () => {
                 רותם יפרח</h1>
             <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 mb-8 md:mb-0">
-                    <img src={rotemImage} alt="רותם יפרח - אמנית איפור"
+                    <img src={rotemImage} alt="רותם יפרח - אמנית איפור" loading="lazy"
                          className="rounded-lg shadow-2xl transform hover:scale-105 transition duration-500"/>
                 </div>
                 <div className="md:w-1/2 md:pr-12">
                     <p className="text-lg mb-6 leading-relaxed text-text">
-                        שלום, אני רותם יפרח - אמנית איפור מקצועית עם ניסיון של למעלה מ-10 שנים בתחום, בוגרת ירין שחף ורוית אסף. אני מאמינה שאיפור
+                        שלום, אני רותם יפרח - אמנית איפור מקצועית עם ניסיון של למעלה מ-10 שנים בתחום, בוגרת ירין שחף
+                        ורוית אסף. אני מאמינה שאיפור
                         הוא אומנות שמשלבת יצירתיות, טכניקה וקסם.
                     </p>
                     <p className="text-lg mb-6 leading-relaxed text-text">

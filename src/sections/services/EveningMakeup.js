@@ -36,6 +36,7 @@ const EveningMakeup = () => {
         centerMode: true,
         centerPadding: '0',
         adaptiveHeight: false,
+        lazyLoad: 'ondemand',
         responsive: [
             {
                 breakpoint: 768,
@@ -67,6 +68,7 @@ const EveningMakeup = () => {
                             <div key={index} className="flex justify-center items-center">
                                 <div className="w-full h-[400px] flex justify-center items-center"> {/* Fixed height */}
                                     <img
+                                        loading="lazy"
                                         src={image}
                                         alt={`Eyebrow Styling ${index + 1}`}
                                         className="max-w-full max-h-full object-contain rounded-lg"

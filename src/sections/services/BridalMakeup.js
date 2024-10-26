@@ -20,6 +20,7 @@ const BridalMakeup = () => {
         centerMode: true,
         centerPadding: '0',
         adaptiveHeight: false,
+        lazyLoad: 'ondemand',
         responsive: [
             {
                 breakpoint: 768,

@@ -32,6 +32,7 @@ const PersonalMakeupWorkshop = () => {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
+        lazyLoad: 'ondemand'
     };
 
     return (
@@ -60,7 +61,7 @@ const PersonalMakeupWorkshop = () => {
                 <Slider {...sliderSettings}>
                     {images.map((image, index) => (
                         <div key={index} className="p-1">
-                            <img src={image} alt={`Makeup Workshop ${index + 1}`}
+                            <img src={image} loading="lazy" alt={`Makeup Workshop ${index + 1}`}
                                  className="w-full h-80 object-cover rounded-lg"/>
                         </div>
                     ))}

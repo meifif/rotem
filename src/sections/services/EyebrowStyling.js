@@ -35,7 +35,8 @@ const EyebrowStyling = () => {
         arrows: false,
         centerMode: true,
         centerPadding: '0',
-        className: 'center-slick'
+        className: 'center-slick',
+        lazyLoad: 'ondemand'
     };
 
     return (
@@ -70,6 +71,7 @@ const EyebrowStyling = () => {
                     {images.map((image, index) => (
                         <div key={index} className="p-1">
                             <img
+                                loading="lazy"
                                 src={image}
                                 className={"object-contain rounded-lg"}
                                 alt={`Eyebrow Styling ${index + 1}`}

@@ -85,7 +85,7 @@ const Portfolio = () => {
                         <button onClick={closeModal}
                                 className="absolute top-4 right-4 text-white text-2xl">&times;</button>
                         {selectedImage && (
-                            <img src={selectedImage} alt="תמונת פורטפוליו מוגדלת"
+                            <img loading="lazy" src={selectedImage} alt="תמונת פורטפוליו מוגדלת"
                                  className="max-w-full max-h-full object-contain"/>
                         )}
                     </Modal>
