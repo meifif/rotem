@@ -27,11 +27,13 @@ const ContactCTA = () => {
 
                     <div className="flex flex-col items-center gap-4">
                         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                            <Button
-                                text="שלחי הודעה בוואטסאפ"
-                                Icon={whatsAppIcon}
-                                hoverColor="hover:bg-green-500"
-                            />
+                            <a href=" https://wa.link/z9cg9x" target="_blank" rel="noreferrer" className="inline-block">
+                                <Button
+                                    text="שלחי הודעה בוואטסאפ"
+                                    Icon={whatsAppIcon}
+                                    hoverColor="hover:bg-green-500"
+                                />
+                            </a>
                             <button
                                 onClick={() => setIsFormVisible(!isFormVisible)}
                                 className="flex items-center justify-center gap-2 px-6 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-all duration-300"
