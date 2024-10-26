@@ -5,10 +5,9 @@ import 'slick-carousel/slick/slick-theme.css';
 import {Droplet, Ruler, Scissors, Smile} from 'lucide-react';
 import CtaButton from "./shared/CtaButton";
 
-// Import your images statically
-/*import image1 from '../img/eyebrow/image1.jpg';
-import image2 from '../img/eyebrow/image2.jpg';
-import image3 from '../img/eyebrow/image3.jpg';*/
+import image1 from '../../img/eyebrow/image1.png';
+import image2 from '../../img/eyebrow/image2.png';
+import image3 from '../../img/eyebrow/image3.png';
 
 const FeatureItem = ({icon: Icon, title, description}) => (
     <div className="flex items-start space-x-4 mb-6">
@@ -23,23 +22,26 @@ const FeatureItem = ({icon: Icon, title, description}) => (
 );
 
 const EyebrowStyling = () => {
-    const images = [];
+    const images = [image1, image2, image3];
 
     const sliderSettings = {
-        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
+        dots: true,
+        arrows: false,
+        centerMode: true,
+        centerPadding: '0',
+        className: 'center-slick'
     };
 
     return (
         <div className="bg-white p-8 rounded-lg shadow-lg">
             <h2 className="text-3xl font-bold mb-6 text-pink-600 text-center">עיצוב גבות</h2>
 
-            {/* Main Content */}
             <div className="mb-10">
                 <p className="text-gray-700 text-lg leading-relaxed">
                     עיצוב גבות מקצועי יכול לשנות את כל מראה הפנים ולהדגיש את יופייך הטבעי. אני מתמחה בהתאמה אישית של
@@ -50,19 +52,37 @@ const EyebrowStyling = () => {
                 </p>
             </div>
 
-            {/* Image Slider */}
+            <style jsx global>{`
+                .center-slick .slick-slide {
+                    display: flex !important;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .center-slick .slick-track {
+                    display: flex !important;
+                    align-items: center;
+                }
+            `}</style>
+
             <div className="mb-8">
                 <Slider {...sliderSettings}>
                     {images.map((image, index) => (
                         <div key={index}>
-                            <img src={image} alt={`Eyebrow Styling ${index + 1}`}
-                                 className="w-full h-80 object-cover rounded-lg"/>
+                            <img
+                                src={image}
+                                alt={`Eyebrow Styling ${index + 1}`}
+                                style={{
+                                    margin: '0 auto',
+                                    maxHeight: '400px',
+                                    width: 'auto'
+                                }}
+                            />
                         </div>
                     ))}
                 </Slider>
             </div>
 
-            {/* Features Section */}
             <div className="bg-pink-50 p-8 rounded-lg shadow-inner">
                 <h3 className="text-2xl font-bold text-pink-600 mb-8 text-center">למה לבחור בשירות עיצוב הגבות שלי?</h3>
                 <div className="grid md:grid-cols-2 gap-8">
