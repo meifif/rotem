@@ -7,6 +7,7 @@ import Navbar from '../sections/Navbar';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import WorkSlider from "../sections/WorkSlider";
+import ContactCTA from "../sections/ContactCTA";
 
 const Home = () => {
     return (
@@ -25,6 +26,9 @@ const Home = () => {
 
                 <section id="services" className="py-10">
                     <Services/>
+                </section>
+                <section id="cta" className="py-10">
+                    <ContactCTA/>
                 </section>
             </main>
             <Footer/>
