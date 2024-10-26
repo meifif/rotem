@@ -59,7 +59,7 @@ const PersonalMakeupWorkshop = () => {
             <div className="mb-8">
                 <Slider {...sliderSettings}>
                     {images.map((image, index) => (
-                        <div key={index}>
+                        <div key={index} className="p-1">
                             <img src={image} alt={`Makeup Workshop ${index + 1}`}
                                  className="w-full h-80 object-cover rounded-lg"/>
                         </div>

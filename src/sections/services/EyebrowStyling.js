@@ -68,9 +68,10 @@ const EyebrowStyling = () => {
             <div className="mb-8">
                 <Slider {...sliderSettings}>
                     {images.map((image, index) => (
-                        <div key={index}>
+                        <div key={index} className="p-1">
                             <img
                                 src={image}
+                                className={"object-contain rounded-lg"}
                                 alt={`Eyebrow Styling ${index + 1}`}
                                 style={{
                                     margin: '0 auto',
