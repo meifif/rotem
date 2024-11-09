@@ -18,8 +18,13 @@ const RotemHome = () => {
 
             {/* Content */}
             <div className="bg-white bg-opacity-80 p-8 rounded-3xl shadow-xl max-w-2xl z-10 border border-pink-200">
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 text-pink-500 font-secondary">ROTEM IFRACH</h1>
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 text-pink-500 font-secondary">Makeup Artist</h1>
+                <div className="w-64 h-64 mx-auto mb-6">
+                    <img
+                        src="/logo.png"
+                        alt="Rotem Ifrach Logo"
+                        className="w-full h-full"
+                    />
+                </div>
                 <p className="text-xl md:text-2xl mb-8 text-text">
                     רותם יפרח | מאפרת מקצועית |{' '}
                     <span className="whitespace-nowrap">מעצבת גבות</span>
