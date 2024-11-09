@@ -8,6 +8,7 @@ import CtaButton from "./shared/CtaButton";
 import image1 from '../../img/eyebrow/image1.png';
 import image2 from '../../img/eyebrow/image2.png';
 import image3 from '../../img/eyebrow/image3.png';
+import image4 from '../../img/eyebrow/image4.png';
 
 const FeatureItem = ({icon: Icon, title, description}) => (
     <div className="flex items-start space-x-4 mb-6">
@@ -22,7 +23,7 @@ const FeatureItem = ({icon: Icon, title, description}) => (
 );
 
 const EyebrowStyling = () => {
-    const images = [image1, image2, image3];
+    const images = [image1, image2, image3, image4];
 
     const sliderSettings = {
         infinite: true,
