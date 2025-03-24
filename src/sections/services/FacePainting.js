@@ -2,13 +2,18 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import {Palette, Heart, Star, Sparkles} from 'lucide-react';
+import {Heart, Palette, Sparkles, Star} from 'lucide-react';
 import CtaButton from "./shared/CtaButton";
 
 // Import your images statically
-import a from '../../img/evening-makeup/a.jpg';
-import b from '../../img/evening-makeup/b.jpg';
-import c from '../../img/evening-makeup/c.jpg';
+import a from '../../img/face-painting/a.jpg';
+import b from '../../img/face-painting/b.jpg';
+import c from '../../img/face-painting/c.jpg';
+import d from '../../img/face-painting/d.jpg';
+import e from '../../img/face-painting/e.jpg';
+import f from '../../img/face-painting/f.jpg';
+import g from '../../img/face-painting/g.jpg';
+import h from '../../img/face-painting/h.jpg';
 
 const FeatureItem = ({icon: Icon, title, description}) => (
     <div className="flex items-start space-x-4 mb-6">
@@ -23,7 +28,7 @@ const FeatureItem = ({icon: Icon, title, description}) => (
 );
 
 const FacePainting = () => {
-    const images = [a, b, c];
+    const images = [a, b, c, d, e, f, g, h];
 
     const portraitSliderSettings = {
         dots: true,
@@ -52,10 +57,12 @@ const FacePainting = () => {
             <h3 className="text-2xl font-bold mb-4 text-pink-500">איפור ציורי פנים</h3>
             <div className="space-y-4 text-right">
                 <p>
-                    איפור ציורי הפנים והגוף יוצר עיצובים ייחודיים וקסומים המותאמים לכל מגדר בכל גיל ולאירועים מגוונים. האיפור מותאם במיוחד לימי הולדת ומסיבות, לאירועים חברתיים, לחגיגות פורים ועוד.
+                    איפור ציורי הפנים והגוף יוצר עיצובים ייחודיים וקסומים המותאמים לכל מגדר בכל גיל ולאירועים מגוונים.
+                    האיפור מותאם במיוחד לימי הולדת ומסיבות, לאירועים חברתיים, לחגיגות פורים ועוד.
                 </p>
                 <p>
-                    האיפור מתבצע באמצעות צבעים מקצועיים ובטוחים לשימוש, במגוון רחב של עיצובים החל מפרפרים ופרחים עדינים ועד לדמויות מצוירות מורכבות וציורי פנים מלאים.
+                    האיפור מתבצע באמצעות צבעים מקצועיים ובטוחים לשימוש, במגוון רחב של עיצובים החל מפרפרים ופרחים עדינים
+                    ועד לדמויות מצוירות מורכבות וציורי פנים מלאים.
                 </p>
                 <p>
                     בסיום האיפור כל המשתתפים מתהדרים בציור ססגוני, צבעוני ומלהיב התורם לאווירה השמחה של האירוע.
