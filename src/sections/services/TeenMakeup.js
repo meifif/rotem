@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import {Clock, Eye, Feather, Palette, Star} from 'lucide-react';
+import {Baby, Heart, Star, Book} from 'lucide-react';
 import CtaButton from "./shared/CtaButton";
 
 // Import your images statically
@@ -22,7 +22,7 @@ const FeatureItem = ({icon: Icon, title, description}) => (
     </div>
 );
 
-const EveningMakeup = () => {
+const TeenMakeup = () => {
     const images = [a, b, c];
 
     const portraitSliderSettings = {
@@ -49,16 +49,16 @@ const EveningMakeup = () => {
 
     return (
         <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-2xl font-bold mb-4 text-pink-500">איפור לאירועים וערב</h3>
+            <h3 className="text-2xl font-bold mb-4 text-pink-500">איפור לנערות</h3>
             <div className="space-y-4 text-right">
                 <p>
-                    האיפור לאירועים וערב מותאם באופן מושלם ללבוש של כל אישה ולסוג האירוע. ניתן לבחור בין מגוון אפשרויות איפור ממראה אלגנטי או דרמטי מעושן לאיפור טבעי וקלאסי, בהתאם להעדפות ולאישיות הייחודית.
+                    האיפור לנערות לוקח בחשבון את מצב העור של כל נערה, יוצר כיסוי לפי הצרכים האישיים ומבליט את היופי והמראה הטבעי שלה.
                 </p>
                 <p>
-                    האיפור מתבצע באמצעות טכניקות מתקדמות המבליטות את הזוהר הטבעי של תווי הפנים עם תוספת גלאם ומבטיחות את עמידות האיפור לאורך כל הערב.
+                    האיפור מתבצע באמצעות חומרים איכותיים המותאמים במיוחד לעור צעיר, כשהמטרה העיקרית היא להדגיש את הנשיות והאישיות של המתבגרת.
                 </p>
                 <p>
-                    בסיום תהליך האיפור ההופעה של כל אחת מקרינה את הייחוד שלה ומאפשרת לה להרגיש הכי יפה באירוע.
+                    בסיום האיפור כל נערה מקבלת טיפים והדרכה לשימוש נכון במוצרי האיפור כדי להנות ממראה מושלם ולשמר אותו בשגרה היומיומית.
                 </p>
             </div>
 
@@ -70,7 +70,7 @@ const EveningMakeup = () => {
                                 <div className="w-full h-[400px] flex justify-center items-center">
                                     <img
                                         src={image}
-                                        alt={`Evening Makeup ${index + 1}`}
+                                        alt={`Teen Makeup ${index + 1}`}
                                         className="max-w-full max-h-full object-contain rounded-lg"
                                     />
                                 </div>
@@ -81,27 +81,27 @@ const EveningMakeup = () => {
             </div>
 
             <div className="bg-pink-50 p-8 rounded-lg shadow-inner">
-                <h3 className="text-2xl font-bold text-pink-600 mb-8 text-center">למה לבחור באיפור ערב שלי?</h3>
+                <h3 className="text-2xl font-bold text-pink-600 mb-8 text-center">למה לבחור באיפור נערות שלי?</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                     <FeatureItem
                         icon={Star}
-                        title="מוצרי איפור איכותיים"
-                        description="שימוש במוצרים מקצועיים המבטיחים מראה מושלם ועמיד לאורך כל הערב."
+                        title="מוצרים מותאמים לעור צעיר"
+                        description="שימוש במוצרים איכותיים המתאימים במיוחד לעור מתבגר, תוך שמירה על בריאות העור."
                     />
                     <FeatureItem
-                        icon={Eye}
-                        title="התאמה מושלמת לאירוע"
-                        description="איפור מותאם לסוג האירוע, הלבוש והאווירה, תוך שמירה על הסגנון האישי שלך."
+                        icon={Heart}
+                        title="הדגשת היופי הטבעי"
+                        description="טכניקות איפור המדגישות את היופי הטבעי ומחזקות את הביטחון העצמי."
                     />
                     <FeatureItem
-                        icon={Palette}
-                        title="מגוון סגנונות"
-                        description="אפשרות לבחור בין מראה טבעי, אלגנטי או דרמטי, בהתאם להעדפותייך."
+                        icon={Baby}
+                        title="התאמה אישית"
+                        description="איפור המותאם לגיל, לסגנון האישי ולצרכים הייחודיים של כל נערה."
                     />
                     <FeatureItem
-                        icon={Clock}
-                        title="עמידות לאורך זמן"
-                        description="טכניקות מתקדמות המבטיחות שהאיפור יישאר מושלם לאורך כל האירוע."
+                        icon={Book}
+                        title="הדרכה והכוונה"
+                        description="מתן טיפים מקצועיים לשימוש נכון במוצרי איפור ושמירה על עור בריא."
                     />
                 </div>
             </div>
@@ -109,11 +109,11 @@ const EveningMakeup = () => {
             <div className="mt-10 text-center flex justify-center">
                 <CtaButton
                     link="https://wa.link/1deujn"
-                    text="הזמיני תור לאיפור ערב"
+                    text="הזמיני תור לאיפור נערות"
                 />
             </div>
         </div>
     );
 };
 
-export default EveningMakeup;
+export default TeenMakeup; 

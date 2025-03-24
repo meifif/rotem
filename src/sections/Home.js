@@ -26,20 +26,37 @@ const RotemHome = () => {
                     />
                 </div>
                 <p className="text-xl md:text-2xl mb-8 text-text">
-                    רותם יפרח | מאפרת מקצועית |{' '}
-                    <span className="whitespace-nowrap">מעצבת גבות</span>
+                    רותם יפרח | איפור ביוטי מקצועי {' '}
                 </p>
 
                 {/* Redesigned services list */}
                 <div className="mb-8 flex flex-col items-center">
-                    <ul className="text-lg">
-                        {['איפור Beauty', 'עיצוב גבות ושפם', 'סדנת איפור אישי'].map((service, index) => (
-                            <li key={index} className="flex items-center mb-2">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-lg">
+                        {[
+                            'עיצוב גבות',
+                            'איפור לנערות',
+                            'איפור לכלות',
+                            'איפור ציורי פנים',
+                            'איפור לאירועים וערב'
+                            ].map((service, index) => (
+                            <li key={index} className="flex items-center">
                                 <Star size={16} className="text-pink-400 mr-2 ml-2"/>
                                 <span>{service}</span>
                             </li>
                         ))}
-                    </ul>
+                        {[
+                            'איפור לבמה וטלוויזיה',
+                            'איפור לאירועים עסקיים',
+                            'סדנא אישית לאיפור עצמי',
+                            'סדנאות איפור קבוצתיות',
+                            'איפור לימי הולדת ובת מצווה'
+                            ].map((service, index) => (
+                            <li key={index} className="flex items-center">
+                                <Star size={16} className="text-pink-400 mr-2 ml-2"/>
+                                <span>{service}</span>
+                            </li>
+                        ))}
+                    </div>
                 </div>
 
                 <div

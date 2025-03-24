@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import {Clock, Eye, Feather, Palette, Star} from 'lucide-react';
+import {Cake, Heart, Star, Sparkles} from 'lucide-react';
 import CtaButton from "./shared/CtaButton";
 
 // Import your images statically
@@ -22,7 +22,7 @@ const FeatureItem = ({icon: Icon, title, description}) => (
     </div>
 );
 
-const EveningMakeup = () => {
+const BirthdayMakeup = () => {
     const images = [a, b, c];
 
     const portraitSliderSettings = {
@@ -49,16 +49,16 @@ const EveningMakeup = () => {
 
     return (
         <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-2xl font-bold mb-4 text-pink-500">איפור לאירועים וערב</h3>
+            <h3 className="text-2xl font-bold mb-4 text-pink-500">איפור לימי הולדת ובת מצווה</h3>
             <div className="space-y-4 text-right">
                 <p>
-                    האיפור לאירועים וערב מותאם באופן מושלם ללבוש של כל אישה ולסוג האירוע. ניתן לבחור בין מגוון אפשרויות איפור ממראה אלגנטי או דרמטי מעושן לאיפור טבעי וקלאסי, בהתאם להעדפות ולאישיות הייחודית.
+                    האיפור לבנות מצווה וימי הולדת יוצר מראה קסום מותאם אישית ומשלב בין רעננות נעורים לבין מראה חגיגי ומרשים.
                 </p>
                 <p>
-                    האיפור מתבצע באמצעות טכניקות מתקדמות המבליטות את הזוהר הטבעי של תווי הפנים עם תוספת גלאם ומבטיחות את עמידות האיפור לאורך כל הערב.
+                    האיפור מתבצע באמצעות מוצרים המותאמים במיוחד לעור צעיר ושומרים על בריאותו. הדגש הוא על יצירת מראה טבעי ושמח שמבליט את היופי הטבעי של הילדה, תוך הקפדה על עמידות האיפור לאורך כל החגיגה.
                 </p>
                 <p>
-                    בסיום תהליך האיפור ההופעה של כל אחת מקרינה את הייחוד שלה ומאפשרת לה להרגיש הכי יפה באירוע.
+                    בסיום האיפור כל ילדה מקבלת טיפים והדרכה שיעזרו לשמור על מראה רענן ומושלם.
                 </p>
             </div>
 
@@ -70,7 +70,7 @@ const EveningMakeup = () => {
                                 <div className="w-full h-[400px] flex justify-center items-center">
                                     <img
                                         src={image}
-                                        alt={`Evening Makeup ${index + 1}`}
+                                        alt={`Birthday Makeup ${index + 1}`}
                                         className="max-w-full max-h-full object-contain rounded-lg"
                                     />
                                 </div>
@@ -81,27 +81,27 @@ const EveningMakeup = () => {
             </div>
 
             <div className="bg-pink-50 p-8 rounded-lg shadow-inner">
-                <h3 className="text-2xl font-bold text-pink-600 mb-8 text-center">למה לבחור באיפור ערב שלי?</h3>
+                <h3 className="text-2xl font-bold text-pink-600 mb-8 text-center">למה לבחור באיפור יום הולדת ובת מצווה שלי?</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                     <FeatureItem
                         icon={Star}
-                        title="מוצרי איפור איכותיים"
-                        description="שימוש במוצרים מקצועיים המבטיחים מראה מושלם ועמיד לאורך כל הערב."
+                        title="מוצרים מותאמים לעור צעיר"
+                        description="שימוש במוצרים עדינים ואיכותיים המתאימים במיוחד לעור צעיר ורגיש."
                     />
                     <FeatureItem
-                        icon={Eye}
-                        title="התאמה מושלמת לאירוע"
-                        description="איפור מותאם לסוג האירוע, הלבוש והאווירה, תוך שמירה על הסגנון האישי שלך."
+                        icon={Heart}
+                        title="חוויה מיוחדת ומהנה"
+                        description="יצירת אווירה כיפית ומרגשת שהופכת את האיפור לחלק בלתי נפרד מחוויית החגיגה."
                     />
                     <FeatureItem
-                        icon={Palette}
-                        title="מגוון סגנונות"
-                        description="אפשרות לבחור בין מראה טבעי, אלגנטי או דרמטי, בהתאם להעדפותייך."
+                        icon={Cake}
+                        title="מראה חגיגי ומותאם גיל"
+                        description="איפור המשלב בין רעננות נעורים למראה חגיגי, תוך שמירה על טבעיות ועדינות."
                     />
                     <FeatureItem
-                        icon={Clock}
-                        title="עמידות לאורך זמן"
-                        description="טכניקות מתקדמות המבטיחות שהאיפור יישאר מושלם לאורך כל האירוע."
+                        icon={Sparkles}
+                        title="טיפים והדרכה"
+                        description="מתן טיפים שימושיים לשמירה על מראה רענן ומטופח לאורך כל האירוע."
                     />
                 </div>
             </div>
@@ -109,11 +109,11 @@ const EveningMakeup = () => {
             <div className="mt-10 text-center flex justify-center">
                 <CtaButton
                     link="https://wa.link/1deujn"
-                    text="הזמיני תור לאיפור ערב"
+                    text="הזמיני תור לאיפור יום הולדת"
                 />
             </div>
         </div>
     );
 };
 
-export default EveningMakeup;
+export default BirthdayMakeup; 

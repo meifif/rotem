@@ -2,13 +2,13 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import {Droplet, Ruler, Scissors, Smile} from 'lucide-react';
+import {Scissors, Heart, Star, Clock} from 'lucide-react';
 import CtaButton from "./shared/CtaButton";
 
-import image1 from '../../img/eyebrow/image1.png';
-import image2 from '../../img/eyebrow/image2.png';
-import image3 from '../../img/eyebrow/image3.png';
-import image4 from '../../img/eyebrow/image4.png';
+// Import your images statically
+import a from '../../img/evening-makeup/a.jpg';
+import b from '../../img/evening-makeup/b.jpg';
+import c from '../../img/evening-makeup/c.jpg';
 
 const FeatureItem = ({icon: Icon, title, description}) => (
     <div className="flex items-start space-x-4 mb-6">
@@ -23,98 +23,92 @@ const FeatureItem = ({icon: Icon, title, description}) => (
 );
 
 const EyebrowStyling = () => {
-    const images = [image1, image2, image3, image4];
+    const images = [a, b, c];
 
-    const sliderSettings = {
+    const portraitSliderSettings = {
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
-        dots: true,
-        arrows: false,
         centerMode: true,
         centerPadding: '0',
-        className: 'center-slick',
-        lazyLoad: 'ondemand'
+        adaptiveHeight: false,
+        lazyLoad: 'ondemand',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    centerPadding: '0',
+                }
+            }
+        ]
     };
 
     return (
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-3xl font-bold mb-6 text-pink-600 text-center">עיצוב גבות</h2>
-
-            <div className="mb-10">
-                <p className="text-gray-700 text-lg leading-relaxed">
-                    עיצוב גבות מקצועי יכול לשנות את כל מראה הפנים ולהדגיש את יופייך הטבעי. אני מתמחה בהתאמה אישית של
-                    צורת הגבות
-                    לפי מבנה הפנים שלך, תוך שימוש בטכניקות מתקדמות לעיצוב, צביעה וטיפוח. בין אם את מעוניינת בגבות טבעיות
-                    או
-                    במראה מודגש יותר, אני אעצב עבורך את הגבות המושלמות שיתאימו בדיוק לסגנון ולאופי שלך.
+        <div className="bg-white rounded-lg shadow-lg p-6">
+            <h3 className="text-2xl font-bold mb-4 text-pink-500">עיצוב גבות</h3>
+            <div className="space-y-4 text-right">
+                <p>
+                    עיצוב גבות מקצועי הוא אומנות המשלבת דיוק, סימטריה והתאמה אישית למבנה הפנים שלך.
+                </p>
+                <p>
+                    בטיפול אני משתמשת בטכניקות מתקדמות ומוצרים איכותיים כדי ליצור צורת גבות מושלמת שתדגיש את יופייך הטבעי. התהליך כולל ניקוי, עיצוב מדויק, והדרכה לטיפול ותחזוקה בבית.
+                </p>
+                <p>
+                    התוצאה היא גבות מעוצבות בצורה טבעית ומחמיאה, המשדרגות את המראה הכללי שלך.
                 </p>
             </div>
 
-            <style jsx global>{`
-                .center-slick .slick-slide {
-                    display: flex !important;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                .center-slick .slick-track {
-                    display: flex !important;
-                    align-items: center;
-                }
-            `}</style>
-
             <div className="mb-8">
-                <Slider {...sliderSettings}>
-                    {images.map((image, index) => (
-                        <div key={index} className="p-1">
-                            <img
-                                loading="lazy"
-                                src={image}
-                                className={"object-contain rounded-lg"}
-                                alt={`Eyebrow Styling ${index + 1}`}
-                                style={{
-                                    margin: '0 auto',
-                                    maxHeight: '400px',
-                                    width: 'auto'
-                                }}
-                            />
-                        </div>
-                    ))}
-                </Slider>
+                <div className="max-w-2xl mx-auto">
+                    <Slider {...portraitSliderSettings}>
+                        {images.map((image, index) => (
+                            <div key={index} className="flex justify-center items-center">
+                                <div className="w-full h-[400px] flex justify-center items-center">
+                                    <img
+                                        src={image}
+                                        alt={`Eyebrow Styling ${index + 1}`}
+                                        className="max-w-full max-h-full object-contain rounded-lg"
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </Slider>
+                </div>
             </div>
 
             <div className="bg-pink-50 p-8 rounded-lg shadow-inner">
-                <h3 className="text-2xl font-bold text-pink-600 mb-8 text-center">למה לבחור בשירות עיצוב הגבות שלי?</h3>
+                <h3 className="text-2xl font-bold text-pink-600 mb-8 text-center">למה לבחור בעיצוב גבות אצלי?</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                     <FeatureItem
                         icon={Scissors}
-                        title="טכניקות עיצוב מתקדמות"
-                        description="שימוש בשיטות חדשניות לעיצוב גבות, כולל שימוש בפינצטה, חוט וגזירה מדויקת."
+                        title="טכניקה מדויקת"
+                        description="שימוש בכלים מקצועיים ובטכניקות מתקדמות לעיצוב מדויק ומושלם."
                     />
                     <FeatureItem
-                        icon={Ruler}
-                        title="התאמה אישית למבנה הפנים"
-                        description="ניתוח מדוקדק של מבנה הפנים שלך ליצירת צורת גבות שתחמיא לך ביותר."
+                        icon={Heart}
+                        title="התאמה אישית"
+                        description="עיצוב המותאם למבנה הפנים ולסגנון האישי שלך."
                     />
                     <FeatureItem
-                        icon={Droplet}
-                        title="צביעה וטיפוח"
-                        description="שימוש בצבעים טבעיים ובטכניקות טיפוח לגבות מלאות ומטופחות."
+                        icon={Star}
+                        title="תוצאות טבעיות"
+                        description="יצירת מראה טבעי ומחמיא שמשתלב בצורה הרמונית עם תווי פנייך."
                     />
                     <FeatureItem
-                        icon={Smile}
-                        title="תוצאות מתמשכות"
-                        description="ייעוץ לטיפול ביתי ותחזוקה נכונה לשמירה על מראה מושלם לאורך זמן."
+                        icon={Clock}
+                        title="הדרכה מקצועית"
+                        description="קבלת טיפים והנחיות לשמירה על צורת הגבות בין הטיפולים."
                     />
                 </div>
             </div>
+
             <div className="mt-10 text-center flex justify-center">
                 <CtaButton
-                    link="https://wa.link/bpxxhn"
+                    link="https://wa.link/1deujn"
                     text="הזמיני תור לעיצוב גבות"
                 />
             </div>

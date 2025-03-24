@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import {Clock, Eye, Feather, Palette, Star} from 'lucide-react';
+import {Video, Camera, Star, Clock} from 'lucide-react';
 import CtaButton from "./shared/CtaButton";
 
 // Import your images statically
@@ -22,7 +22,7 @@ const FeatureItem = ({icon: Icon, title, description}) => (
     </div>
 );
 
-const EveningMakeup = () => {
+const StageMakeup = () => {
     const images = [a, b, c];
 
     const portraitSliderSettings = {
@@ -49,16 +49,16 @@ const EveningMakeup = () => {
 
     return (
         <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-2xl font-bold mb-4 text-pink-500">איפור לאירועים וערב</h3>
+            <h3 className="text-2xl font-bold mb-4 text-pink-500">איפור לבמה וטלוויזיה</h3>
             <div className="space-y-4 text-right">
                 <p>
-                    האיפור לאירועים וערב מותאם באופן מושלם ללבוש של כל אישה ולסוג האירוע. ניתן לבחור בין מגוון אפשרויות איפור ממראה אלגנטי או דרמטי מעושן לאיפור טבעי וקלאסי, בהתאם להעדפות ולאישיות הייחודית.
+                    איפור מקצועי לבמה וטלוויזיה דורש התאמה והבנה מעמיקה של דרישות של מצלמה ותאורה.
                 </p>
                 <p>
-                    האיפור מתבצע באמצעות טכניקות מתקדמות המבליטות את הזוהר הטבעי של תווי הפנים עם תוספת גלאם ומבטיחות את עמידות האיפור לאורך כל הערב.
+                    האיפור מתוכנן ומתבצע בקפידה כדי להבטיח מראה מושלם מכל זווית צילום, עם דגש מיוחד על עמידות ממושכת תחת אורות חזקים ותנאי במה. השימוש במוצרים מקצועיים באיכות גבוהה וטכניקות מתקדמות מבליט את תווי הפנים והבעתם.
                 </p>
                 <p>
-                    בסיום תהליך האיפור ההופעה של כל אחת מקרינה את הייחוד שלה ומאפשרת לה להרגיש הכי יפה באירוע.
+                    בסיום האיפור המראה מרשים ומקצועי, עובר מסך ובולט היטב על הבמה.
                 </p>
             </div>
 
@@ -70,7 +70,7 @@ const EveningMakeup = () => {
                                 <div className="w-full h-[400px] flex justify-center items-center">
                                     <img
                                         src={image}
-                                        alt={`Evening Makeup ${index + 1}`}
+                                        alt={`Stage Makeup ${index + 1}`}
                                         className="max-w-full max-h-full object-contain rounded-lg"
                                     />
                                 </div>
@@ -81,27 +81,27 @@ const EveningMakeup = () => {
             </div>
 
             <div className="bg-pink-50 p-8 rounded-lg shadow-inner">
-                <h3 className="text-2xl font-bold text-pink-600 mb-8 text-center">למה לבחור באיפור ערב שלי?</h3>
+                <h3 className="text-2xl font-bold text-pink-600 mb-8 text-center">למה לבחור באיפור במה וטלוויזיה שלי?</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                     <FeatureItem
                         icon={Star}
-                        title="מוצרי איפור איכותיים"
-                        description="שימוש במוצרים מקצועיים המבטיחים מראה מושלם ועמיד לאורך כל הערב."
+                        title="מוצרים מקצועיים לבמה"
+                        description="שימוש במוצרים איכותיים המותאמים במיוחד לתנאי תאורה חזקה וצילום."
                     />
                     <FeatureItem
-                        icon={Eye}
-                        title="התאמה מושלמת לאירוע"
-                        description="איפור מותאם לסוג האירוע, הלבוש והאווירה, תוך שמירה על הסגנון האישי שלך."
+                        icon={Camera}
+                        title="התאמה לצילום"
+                        description="טכניקות מיוחדות המבטיחות מראה מושלם מכל זווית צילום ותחת כל תאורה."
                     />
                     <FeatureItem
-                        icon={Palette}
-                        title="מגוון סגנונות"
-                        description="אפשרות לבחור בין מראה טבעי, אלגנטי או דרמטי, בהתאם להעדפותייך."
+                        icon={Video}
+                        title="מומחיות בתחום"
+                        description="ניסיון רב בעבודה עם אנשי במה, שחקנים ומצולמים בטלוויזיה."
                     />
                     <FeatureItem
                         icon={Clock}
                         title="עמידות לאורך זמן"
-                        description="טכניקות מתקדמות המבטיחות שהאיפור יישאר מושלם לאורך כל האירוע."
+                        description="איפור העומד בתנאי במה קשים ונשאר מושלם לאורך שעות של צילומים והופעות."
                     />
                 </div>
             </div>
@@ -109,11 +109,11 @@ const EveningMakeup = () => {
             <div className="mt-10 text-center flex justify-center">
                 <CtaButton
                     link="https://wa.link/1deujn"
-                    text="הזמיני תור לאיפור ערב"
+                    text="הזמיני תור לאיפור במה"
                 />
             </div>
         </div>
     );
 };
 
-export default EveningMakeup;
+export default StageMakeup; 
