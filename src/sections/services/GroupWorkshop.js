@@ -108,7 +108,7 @@ const GroupWorkshop = () => {
 
             <div className="mt-10 text-center flex justify-center">
                 <CtaButton
-                    link="https://wa.link/1deujn"
+                    link="https://wa.link/bpxxhn"
                     text="הזמיני סדנת איפור קבוצתית"
                 />
             </div>

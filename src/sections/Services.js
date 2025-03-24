@@ -39,6 +39,7 @@ const ServiceButton = ({title, icon: Icon, isActive, onClick}) => (
 const Services = () => {
     const [activeService, setActiveService] = useState('bridal');
     const servicesRef = useRef(null);
+    const contentRef = useRef(null);
 
     // Split services into two rows
     const servicesRow1 = [
@@ -59,8 +60,14 @@ const Services = () => {
 
     const handleServiceClick = (serviceId) => {
         setActiveService(serviceId);
-        if (servicesRef.current) {
-            servicesRef.current.scrollIntoView({behavior: 'smooth'});
+        // On mobile, scroll to the content
+        if (window.innerWidth < 768 && contentRef.current) {
+            setTimeout(() => {
+                contentRef.current.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
         }
     };
 
@@ -118,7 +125,7 @@ const Services = () => {
                     ))}
                 </div>
             </div>
-            <div className="mt-8 mb-8">
+            <div className="mt-8 mb-8" ref={contentRef}>
                 {renderActiveService()}
             </div>
         </div>
