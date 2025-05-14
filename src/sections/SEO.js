@@ -33,14 +33,14 @@ const SEO = () => {
                   "telephone": "053-2509989",
                   "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "רחוב צבי גרינברג",
+                    "streetAddress": "רחוב עוזי חיטמן",
                     "addressLocality": "חולון",
                     "addressCountry": "IL"
                   },
                   "geo": {
                     "@type": "GeoCoordinates",
-                    "latitude": 32.0167,
-                    "longitude": 34.7792
+                    "latitude": 31.9975,
+                    "longitude": 34.7659
                   },
                   "openingHoursSpecification": {
                     "@type": "OpeningHoursSpecification",

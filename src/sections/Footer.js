@@ -44,7 +44,7 @@ const Footer = () => {
                         <p className="flex items-start">
                             <MapPin className="ml-2 mt-1 flex-shrink-0" size={18}/>
                             <span>
-                                רחוב צבי גרינברג<br/>
+                                רחוב עוזי חיטמן<br/>
                                 חולון, <br/>
                                 ישראל
                             </span>
