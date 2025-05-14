@@ -4,12 +4,12 @@ import {Facebook, Instagram} from 'lucide-react';
 const SocialMediaSection = () => {
     return (
         <div className="flex space-x-4 mt-4 justify-center">
-            <a href="https://www.facebook.com/rotemifrachs" aria-label="Facebook" target="_blank"
+            <a href="https://www.facebook.com/makeupbyrotemi" aria-label="Facebook" target="_blank"
                rel="noopener noreferrer"
                className="text-pink-100 hover:text-pink-600 transition duration-300">
                 <Facebook size={24}/>
             </a>
-            <a href="https://www.instagram.com/rotemifrachs/" aria-label="Instagram" target="_blank"
+            <a href="https://www.instagram.com/makeupbyrotemi/" aria-label="Instagram" target="_blank"
                rel="noopener noreferrer"
                className="text-pink-100 hover:text-pink-600 transition duration-300">
                 <Instagram size={24}/>
@@ -21,7 +21,7 @@ const SocialMediaSection = () => {
                     <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
                 </svg>
             </a>
-            <a href="https://www.threads.net/@rotemifrachs" aria-label="Threads" target="_blank"
+            <a href="https://www.threads.net/@makeupbyrotemi" aria-label="Threads" target="_blank"
                rel="noopener noreferrer"
                className="text-pink-100 hover:text-pink-600 transition duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"

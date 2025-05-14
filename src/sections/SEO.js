@@ -55,8 +55,8 @@ const SEO = () => {
                     "closes": "23:00"
                   },
                   "sameAs": [
-                    "https://www.facebook.com/rotemifrachs",
-                    "https://www.instagram.com/rotemifrachs"
+                    "https://www.facebook.com/makeupbyrotemi",
+                    "https://www.instagram.com/makeupbyrotemi"
                   ]
                 }
                 `}
