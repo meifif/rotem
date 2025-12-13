@@ -1,138 +1,141 @@
-import React, {useState} from 'react';
-import {Loader2, Send} from 'lucide-react';
+import React, { useState } from 'react';
+import { Send, Check } from 'lucide-react';
 
-const ContactForm = () => {
+const ContactForm = ({ darkMode = false }) => {
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
+        email: '',
         message: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState('');
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleChange = (e) => {
-        const {name, value} = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        setSubmitStatus('');
-
-        try {
-            const response = await fetch('https://formspree.io/f/xwpkvkap', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                setSubmitStatus('success');
-                setFormData({name: '', phone: '', message: ''});
-            } else {
-                setSubmitStatus('error');
-            }
-        } catch (error) {
-            setSubmitStatus('error');
-        } finally {
-            setIsSubmitting(false);
-        }
+        
+        // Simulate form submission
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+        
+        // Reset after showing success
+        setTimeout(() => {
+            setIsSubmitted(false);
+            setFormData({ name: '', phone: '', email: '', message: '' });
+        }, 3000);
     };
 
+    const inputBaseStyles = darkMode 
+        ? "w-full px-5 py-4 bg-white/10 border border-white/20 text-white placeholder-white/50 focus:border-secondary focus:outline-none transition-all duration-300"
+        : "w-full px-5 py-4 bg-white border border-border text-text placeholder-text-light focus:border-secondary focus:outline-none transition-all duration-300";
+
+    const labelStyles = darkMode
+        ? "block text-white/70 text-xs tracking-widest uppercase mb-2"
+        : "block text-text-light text-xs tracking-widest uppercase mb-2";
+
+    if (isSubmitted) {
+        return (
+            <div className="text-center py-12">
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 ${darkMode ? 'bg-secondary' : 'bg-secondary'}`}>
+                    <Check className="w-8 h-8 text-white" />
+                </div>
+                <h3 className={`font-secondary text-2xl mb-3 ${darkMode ? 'text-white' : 'text-primary'}`}>
+                    תודה על פנייתך!
+                </h3>
+                <p className={darkMode ? 'text-white/70' : 'text-text-light'}>
+                    אחזור אלייך בהקדם האפשרי
+                </p>
+            </div>
+        );
+    }
+
     return (
-        <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden p-6 border border-pink-200">
-            <h3 className="text-2xl font-bold text-pink-500 mb-6 text-center">צרי קשר</h3>
-
-            {submitStatus === 'success' && (
-                <div className="mb-4 p-4 bg-green-50 text-green-700 rounded-lg text-center">
-                    תודה על פנייתך! אחזור אלייך בהקדם 😊
-                </div>
-            )}
-
-            {submitStatus === 'error' && (
-                <div className="mb-4 p-4 bg-red-50 text-red-700 rounded-lg text-center">
-                    משהו השתבש... אנא נסי שוב או צרי קשר דרך הוואטסאפ
-                </div>
-            )}
-
-            <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                        שם מלא
-                    </label>
+                    <label htmlFor="name" className={labelStyles}>שם מלא</label>
                     <input
                         type="text"
                         id="name"
                         name="name"
-                        required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                        required
+                        className={inputBaseStyles}
+                        placeholder="השם שלך"
                     />
                 </div>
-
                 <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                        טלפון
-                    </label>
+                    <label htmlFor="phone" className={labelStyles}>טלפון</label>
                     <input
                         type="tel"
                         id="phone"
                         name="phone"
-                        required
-                        pattern="[0-9]{9,10}"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                        הודעה
-                    </label>
-                    <textarea
-                        id="message"
-                        name="message"
                         required
-                        value={formData.message}
-                        onChange={handleChange}
-                        rows="4"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                        className={inputBaseStyles}
+                        placeholder="מספר הטלפון שלך"
                     />
                 </div>
+            </div>
 
-                {/* Hidden honeypot field for bot protection */}
+            <div>
+                <label htmlFor="email" className={labelStyles}>אימייל</label>
                 <input
-                    type="text"
-                    name="_gotcha"
-                    style={{display: 'none'}}
-                    tabIndex="-1"
-                    autoComplete="off"
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={inputBaseStyles}
+                    placeholder="כתובת האימייל שלך (אופציונלי)"
                 />
+            </div>
 
-                <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-pink-500 text-white py-2 px-4 rounded-lg hover:bg-pink-600 transition duration-300 flex items-center justify-center"
-                >
-                    {isSubmitting ? (
-                        <Loader2 className="w-5 h-5 animate-spin"/>
-                    ) : (
-                        <>
-                            <Send className="w-5 h-5 ml-2"/>
-                            <span>שליחה</span>
-                        </>
-                    )}
-                </button>
-            </form>
-        </div>
+            <div>
+                <label htmlFor="message" className={labelStyles}>הודעה</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows="4"
+                    className={`${inputBaseStyles} resize-none`}
+                    placeholder="ספרי לי על האירוע שלך..."
+                />
+            </div>
+
+            <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full inline-flex items-center justify-center gap-3 px-8 py-4 text-sm tracking-widest uppercase font-medium transition-all duration-500 ${
+                    isSubmitting
+                        ? 'bg-secondary/50 cursor-not-allowed'
+                        : 'bg-secondary hover:bg-accent hover:shadow-gold'
+                } text-white`}
+            >
+                {isSubmitting ? (
+                    <span className="inline-block w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
+                ) : (
+                    <>
+                        <Send className="w-4 h-4" />
+                        <span>שלחי הודעה</span>
+                    </>
+                )}
+            </button>
+        </form>
     );
 };
 

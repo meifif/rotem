@@ -1,74 +1,78 @@
-import React, {useState} from 'react';
-import {ChevronDown, ChevronUp} from 'lucide-react';
-import Button from '../components/Button';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp, Mail } from 'lucide-react';
 import ContactForm from "../components/ContactForm";
-import whatsAppIcon from "../utile/WhatsAppIcon";
+import WhatsAppIcon from "../utile/WhatsAppIcon";
 
 const ContactCTA = () => {
     const [isFormVisible, setIsFormVisible] = useState(false);
 
     return (
-        <div className="container mx-auto px-4 py-16 bg-gradient-to-b from-pink-50 to-white">
-            <div className="max-w-4xl mx-auto text-center">
-                <div className="bg-white rounded-3xl shadow-xl p-8 border border-pink-200">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-pink-500 font-secondary">
-                        יש לך שאלות נוספות?
+        <section className="section-luxury bg-primary text-white relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent"></div>
+            <div className="absolute top-20 left-10 w-32 h-32 border border-secondary/10 rounded-full"></div>
+            <div className="absolute bottom-20 right-10 w-48 h-48 border border-secondary/10 rounded-full"></div>
+            <div className="absolute top-1/2 left-1/4 w-64 h-64 border border-secondary/5 rounded-full"></div>
+            
+            <div className="container mx-auto px-6 lg:px-12 relative z-10">
+                <div className="max-w-3xl mx-auto text-center">
+                    {/* Section header */}
+                    <div className="flex items-center justify-center gap-4 mb-8">
+                        <span className="w-12 h-px bg-secondary"></span>
+                        <span className="text-secondary text-xs tracking-widest uppercase font-medium">צרי קשר</span>
+                        <span className="w-12 h-px bg-secondary"></span>
+                    </div>
+
+                    <h2 className="font-secondary text-display text-white mb-6">
+                        יש לך שאלות?
                     </h2>
 
-                    <div className="space-y-4 mb-8">
-                        <p className="text-xl text-gray-700 mb-2">
-                            אני כאן בשבילך לכל שאלה, התייעצות או תיאום
-                        </p>
-                        <p className="text-lg text-gray-600">
-                            בין אם את מתכננת אירוע מיוחד, מחפשת טיפים לאיפור יומיומי,
-                            או סתם רוצה להתייעץ - אשמח לעזור ולהעניק לך את החוויה המושלמת
-                        </p>
-                    </div>
+                    <p className="text-white/80 text-lg mb-4">
+                        אני כאן בשבילך לכל שאלה, התייעצות או תיאום
+                    </p>
+                    <p className="text-white/60 mb-12 max-w-xl mx-auto">
+                        בין אם את מתכננת אירוע מיוחד, מחפשת טיפים לאיפור יומיומי,
+                        או סתם רוצה להתייעץ - אשמח לעזור
+                    </p>
 
-                    <div className="flex flex-col items-center gap-4">
-                        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                            <a href=" https://wa.link/z9cg9x" target="_blank" rel="noreferrer" className="inline-block">
-                                <Button
-                                    text="שלחי הודעה בוואטסאפ"
-                                    Icon={whatsAppIcon}
-                                    hoverColor="hover:bg-green-500"
-                                />
-                            </a>
-                            <button
-                                onClick={() => setIsFormVisible(!isFormVisible)}
-                                className="flex items-center justify-center gap-2 px-6 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-all duration-300"
-                            >
-                                {isFormVisible ? (
-                                    <>
-                                        סגירת טופס
-                                        <ChevronUp className="w-5 h-5"/>
-                                    </>
-                                ) : (
-                                    <>
-                                        מילוי טופס יצירת קשר
-                                        <ChevronDown className="w-5 h-5"/>
-                                    </>
-                                )}
-                            </button>
-                        </div>
-
-                        <div
-                            className={`transition-all duration-500 overflow-hidden ${
-                                isFormVisible ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-                            }`}
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-10">
+                        <a 
+                            href="https://wa.link/z9cg9x" 
+                            target="_blank" 
+                            rel="noreferrer"
+                            className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-secondary text-white text-sm tracking-widest uppercase font-medium hover:bg-secondary-light hover:text-primary transition-all duration-500 hover:shadow-gold w-full sm:w-auto"
                         >
-                            <div className="pt-6">
-                                <ContactForm/>
-                            </div>
+                            <WhatsAppIcon className="w-5 h-5" />
+                            <span>הודעה בוואטסאפ</span>
+                        </a>
+
+                        <button
+                            onClick={() => setIsFormVisible(!isFormVisible)}
+                            className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-transparent text-white border border-white/30 text-sm tracking-widest uppercase font-medium hover:border-secondary hover:bg-secondary/10 transition-all duration-500 w-full sm:w-auto"
+                        >
+                            <Mail className="w-4 h-4" />
+                            <span>{isFormVisible ? 'סגור טופס' : 'טופס יצירת קשר'}</span>
+                            {isFormVisible ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                        </button>
+                    </div>
+
+                    {/* Contact Form */}
+                    <div className={`transition-all duration-700 overflow-hidden ${
+                        isFormVisible ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}>
+                        <div className="bg-white/10 backdrop-blur-sm p-8 md:p-12 border border-white/10">
+                            <ContactForm darkMode={true} />
                         </div>
                     </div>
 
-                    <div className="mt-8 text-sm text-gray-500">
-                        מבטיחה לחזור אלייך בהקדם האפשרי 😊
-                    </div>
+                    {/* Promise text */}
+                    <p className="mt-10 text-white/50 text-sm">
+                        מבטיחה לחזור אלייך בהקדם האפשרי
+                    </p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

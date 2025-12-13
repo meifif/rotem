@@ -11,27 +11,26 @@ import ContactCTA from "../sections/ContactCTA";
 
 const Home = () => {
     return (
-        <div dir="rtl" className="font-primary text-right bg-background text-text">
-            <Navbar/>
+        <div dir="rtl" className="font-primary text-right bg-background text-text overflow-x-hidden">
+            <Navbar />
             <main>
-                <section id="home" className="py-10">
-                    <RotemHome/>
+                <section id="home">
+                    <RotemHome />
                 </section>
-                <section id="work" className="py-10">
-                    <WorkSlider/>
+                <section id="work">
+                    <WorkSlider />
                 </section>
-                <section id="about" className="py-10">
-                    <About/>
+                <section id="about">
+                    <About />
                 </section>
-
-                <section id="services" className="py-10">
-                    <Services/>
+                <section id="services">
+                    <Services />
                 </section>
-                <section id="cta" className="py-10">
-                    <ContactCTA/>
+                <section id="cta">
+                    <ContactCTA />
                 </section>
             </main>
-            <Footer/>
+            <Footer />
         </div>
     );
 };
