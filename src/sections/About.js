@@ -8,7 +8,7 @@ const About = () => {
             <div className="absolute top-0 right-0 w-1/2 h-full bg-background-alt/30"></div>
             <div className="absolute top-20 left-20 w-32 h-32 border border-secondary/10 rounded-full"></div>
             <div className="absolute bottom-20 right-20 w-48 h-48 border border-secondary/10 rounded-full"></div>
-            
+
             <div className="container mx-auto px-6 lg:px-12 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                     {/* Image side */}
@@ -16,21 +16,23 @@ const About = () => {
                         <div className="relative">
                             {/* Decorative frame */}
                             <div className="absolute -top-4 -right-4 w-full h-full border border-secondary/30"></div>
-                            
+
                             {/* Main image */}
                             <div className="relative overflow-hidden">
-                                <img 
-                                    src={rotemImage} 
-                                    alt="רותם יפרח - אמנית איפור" 
+                                <img
+                                    src={rotemImage}
+                                    alt="רותם יפרח - אמנית איפור"
                                     loading="lazy"
                                     className="w-full aspect-[3/4] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
                                 />
                                 {/* Subtle overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
+                                <div
+                                    className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
                             </div>
-                            
+
                             {/* Experience badge */}
-                            <div className="absolute -bottom-6 -left-6 bg-secondary text-white px-8 py-6 text-center shadow-gold">
+                            <div
+                                className="absolute -bottom-6 -left-6 bg-secondary text-white px-8 py-6 text-center shadow-gold">
                                 <span className="block font-secondary text-4xl font-medium">10+</span>
                                 <span className="text-xs tracking-widest uppercase">שנות ניסיון</span>
                             </div>
@@ -53,17 +55,17 @@ const About = () => {
                         {/* Description */}
                         <div className="space-y-6 text-text-light leading-relaxed">
                             <p className="text-lg">
-                                שלום, אני רותם יפרח - אמנית איפור מקצועית עם למעלה מעשר שנות ניסיון, 
-                                בוגרת ירין שחף ורוית אסף, שתי מורות דרך שעיצבו את הגישה המקצועית שלי.
+                                שלום, אני רותם יפרח - אמנית איפור מקצועית עם למעלה מעשר שנות ניסיון,
+                                בוגרת ירין שחף ורוית אסף.
                             </p>
                             <p>
-                                איפור עבורי הוא אומנות דקדקנית שמשלבת טכניקה מדויקת, חזון אסתטי ותשומת לב לפרטים הקטנים. 
-                                אין שתי נשים זהות, ואין שני איפורים זהים - כל פגישה היא יצירה חדשה, 
+                                איפור עבורי הוא אומנות דקדקנית שמשלבת טכניקה מדויקת, חזון אסתטי ותשומת לב לפרטים הקטנים.
+                                אין שתי נשים זהות, ואין שני איפורים זהים - כל פגישה היא יצירה חדשה,
                                 מותאמת במיוחד למבנה הפנים, גוון העור והאישיות הייחודית שלך.
                             </p>
                             <p>
-                                אני עובדת עם מוצרי הקוסמטיקה המובחרים, ומשקיעה זמן רב בהכנה לקראת כל אירוע חשוב. 
-                                הפגישות שלי לא ממהרות - אני מקדישה לכל לקוחה את מלוא תשומת הלב, 
+                                אני עובדת עם מוצרי הקוסמטיקה המובחרים, ומשקיעה זמן רב בהכנה לקראת כל אירוע חשוב.
+                                הפגישות שלי לא ממהרות - אני מקדישה לכל לקוחה את מלוא תשומת הלב,
                                 כדי שהתוצאה תהיה איפור שמחזיק מעמד, נראה טבעי, ומשקף בדיוק מי את.
                             </p>
                         </div>
