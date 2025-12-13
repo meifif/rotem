@@ -1,5 +1,5 @@
 import React from 'react';
-import rotemImage from '../img/rotem.jpg';
+import rotemImage from '../img/profile.jpg';
 
 const About = () => {
     return (
