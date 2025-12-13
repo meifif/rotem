@@ -99,10 +99,10 @@ const Services = () => {
                         <span className="w-12 h-px bg-secondary"></span>
                     </div>
                     <h2 className="font-secondary text-display text-primary mb-4">
-                        השירותים שלי
+                        חוויות איפור מותאמות אישית
                     </h2>
                     <p className="text-text-light max-w-2xl mx-auto">
-                        מגוון שירותי איפור מקצועיים המותאמים לכל אירוע ולכל סגנון
+                        כל פרויקט הוא יצירה ייחודית - מאיפור כלות ועד לסדנאות אישיות
                     </p>
                 </div>
 

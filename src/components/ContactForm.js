@@ -50,10 +50,10 @@ const ContactForm = ({ darkMode = false }) => {
                     <Check className="w-8 h-8 text-white" />
                 </div>
                 <h3 className={`font-secondary text-2xl mb-3 ${darkMode ? 'text-white' : 'text-primary'}`}>
-                    תודה על פנייתך!
+                    תודה רבה
                 </h3>
                 <p className={darkMode ? 'text-white/70' : 'text-text-light'}>
-                    אחזור אלייך בהקדם האפשרי
+                    קיבלתי את ההודעה שלך ואשמח לחזור אלייך בהקדם
                 </p>
             </div>
         );
@@ -113,7 +113,7 @@ const ContactForm = ({ darkMode = false }) => {
                     required
                     rows="4"
                     className={`${inputBaseStyles} resize-none`}
-                    placeholder="ספרי לי על האירוע שלך..."
+                        placeholder="ספרי לי על האירוע שלך, הסגנון שאת אוהבת, והחזון שלך..."
                 />
             </div>
 

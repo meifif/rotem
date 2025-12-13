@@ -77,7 +77,7 @@ const Navbar = () => {
                         rel="noreferrer"
                         className="hidden md:inline-flex items-center px-6 py-2.5 bg-secondary text-white text-xs tracking-widest uppercase font-medium hover:bg-accent transition-all duration-300 hover:shadow-gold"
                     >
-                        קבעי תור
+                        צרי קשר
                     </a>
 
                     {/* Mobile Menu Button */}
@@ -124,7 +124,7 @@ const Navbar = () => {
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className="inline-flex items-center px-8 py-3 bg-secondary text-white text-xs tracking-widest uppercase font-medium hover:bg-accent transition-all duration-300"
                                 >
-                                    קבעי תור
+                                    צרי קשר
                                 </a>
                             </li>
                         </ul>

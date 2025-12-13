@@ -53,7 +53,7 @@ const RotemHome = () => {
                 {/* Tagline */}
                 <p className="font-secondary text-2xl md:text-3xl text-text-light mb-12 opacity-0 animate-fade-in-up" 
                    style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
-                    יופי מתוחכם לכל אירוע
+                    איפור הוא אמנות, הפנים שלך הן הקנבס
                 </p>
 
                 {/* Services - elegant horizontal list */}
@@ -80,7 +80,7 @@ const RotemHome = () => {
                         className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-secondary text-white text-sm tracking-widest uppercase font-medium hover:bg-accent transition-all duration-500 hover:shadow-gold"
                     >
                         <WhatsAppIcon className="w-5 h-5 transition-transform group-hover:scale-110" />
-                        <span>קבעי תור</span>
+                        <span>קבעי פגישת ייעוץ</span>
                     </a>
                     <a 
                         href="tel:053-2509989" 

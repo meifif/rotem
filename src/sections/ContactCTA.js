@@ -24,15 +24,15 @@ const ContactCTA = () => {
                     </div>
 
                     <h2 className="font-secondary text-display text-white mb-6">
-                        יש לך שאלות?
+                        בואי נדבר
                     </h2>
 
                     <p className="text-white/80 text-lg mb-4">
-                        אני כאן בשבילך לכל שאלה, התייעצות או תיאום
+                        כל פרויקט מתחיל בשיחה - קצרה, לא מחייבת, ומאוד אישית
                     </p>
                     <p className="text-white/60 mb-12 max-w-xl mx-auto">
-                        בין אם את מתכננת אירוע מיוחד, מחפשת טיפים לאיפור יומיומי,
-                        או סתם רוצה להתייעץ - אשמח לעזור
+                        ספרי לי על האירוע שלך, על הסגנון שאת אוהבת, ועל החזון שלך.
+                        אני כאן כדי להקשיב, לייעץ, ולעזור לך ליצור בדיוק את מה שאת רוצה
                     </p>
 
                     {/* CTA Buttons */}
@@ -44,7 +44,7 @@ const ContactCTA = () => {
                             className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-secondary text-white text-sm tracking-widest uppercase font-medium hover:bg-secondary-light hover:text-primary transition-all duration-500 hover:shadow-gold w-full sm:w-auto"
                         >
                             <WhatsAppIcon className="w-5 h-5" />
-                            <span>הודעה בוואטסאפ</span>
+                            <span>בואי נדבר בוואטסאפ</span>
                         </a>
 
                         <button
@@ -52,7 +52,7 @@ const ContactCTA = () => {
                             className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-transparent text-white border border-white/30 text-sm tracking-widest uppercase font-medium hover:border-secondary hover:bg-secondary/10 transition-all duration-500 w-full sm:w-auto"
                         >
                             <Mail className="w-4 h-4" />
-                            <span>{isFormVisible ? 'סגור טופס' : 'טופס יצירת קשר'}</span>
+                            <span>{isFormVisible ? 'סגור' : 'שלחי הודעה'}</span>
                             {isFormVisible ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                         </button>
                     </div>
@@ -68,7 +68,7 @@ const ContactCTA = () => {
 
                     {/* Promise text */}
                     <p className="mt-10 text-white/50 text-sm">
-                        מבטיחה לחזור אלייך בהקדם האפשרי
+                        אשמח לענות על כל שאלה ולתאם פגישת ייעוץ אישית
                     </p>
                 </div>
             </div>

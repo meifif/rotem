@@ -16,8 +16,8 @@ const Footer = () => {
                     <div className="lg:col-span-1">
                         <h3 className="font-secondary text-3xl text-white mb-4">רותם יפרח</h3>
                         <p className="text-white/60 text-sm leading-relaxed mb-6">
-                            אמנית איפור מקצועית עם ניסיון של למעלה מ-10 שנים. 
-                            מתמחה באיפור כלות, איפור ערב ועיצוב גבות.
+                            אמנית איפור עם למעלה מעשר שנות ניסיון. 
+                            איפור כלות, אירועים, ועיצוב גבות עם תשומת לב לכל פרט.
                         </p>
                         <SocialMediaSection />
                     </div>
