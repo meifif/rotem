@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import WorkSlider from "../sections/WorkSlider";
 import ContactCTA from "../sections/ContactCTA";
+import InstagramFeed from "../sections/InstagramFeed";
 
 const Home = () => {
     return (
@@ -25,6 +26,9 @@ const Home = () => {
                 </section>
                 <section id="services">
                     <Services />
+                </section>
+                <section id="instagram">
+                    <InstagramFeed />
                 </section>
                 <section id="cta">
                     <ContactCTA />
