@@ -7,6 +7,7 @@ import Navbar from '../sections/Navbar';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import WorkSlider from "../sections/WorkSlider";
+import BrandPartners from "../sections/BrandPartners";
 import ContactCTA from "../sections/ContactCTA";
 import InstagramFeed from "../sections/InstagramFeed";
 
@@ -26,6 +27,9 @@ const Home = () => {
                 </section>
                 <section id="services">
                     <Services />
+                </section>
+                <section id="brands">
+                    <BrandPartners />
                 </section>
                 <section id="instagram">
                     <InstagramFeed />

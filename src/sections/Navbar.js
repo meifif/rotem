@@ -18,6 +18,7 @@ const Navbar = () => {
         { href: '/#home', label: 'בית' },
         { href: '/#about', label: 'אודות' },
         { href: '/#services', label: 'שירותים' },
+        { href: '/#brands', label: 'החנות שלי' },
         { to: '/portfolio', label: 'תיק עבודות' },
     ];
 

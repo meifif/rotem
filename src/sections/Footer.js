@@ -42,6 +42,11 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
+                                <a href="/#brands" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                                    החנות שלי
+                                </a>
+                            </li>
+                            <li>
                                 <Link to="/portfolio" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                                     תיק עבודות
                                 </Link>
