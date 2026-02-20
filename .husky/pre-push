@@ -16,6 +16,6 @@ echo "Committing build (build prod)..."
 git commit -m "build prod" || true
 
 echo "Pushing..."
-git push
+git push --no-verify
 
 echo "Pre-push hook completed successfully!"
