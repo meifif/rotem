@@ -1,12 +1,21 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "Running pre-push hook: Building and deploying site..."
+echo "Running pre-push hook: Building, then committing build and pushing..."
 
-echo "Running predeploy script..."
+echo "Running predeploy script (build)..."
 npm run predeploy
 
 echo "Running deploy script..."
 npm run deploy
+
+echo "Staging all changes..."
+git add -A
+
+echo "Committing build (build prod)..."
+git commit -m "build prod" || true
+
+echo "Pushing..."
+git push
 
 echo "Pre-push hook completed successfully!"
