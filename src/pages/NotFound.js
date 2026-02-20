@@ -1,32 +1,33 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {Home} from 'lucide-react';
-import Navbar from "../sections/Navbar";
-import Footer from "../sections/Footer";
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const NotFound = () => {
     return (
-        <main dir="rtl">
-            <Navbar/>
-            <div className="min-h-screen flex items-center justify-center bg-pink-50">
-                <div className="text-center p-8 bg-white rounded-lg shadow-xl max-w-md">
-                    <h1 className="text-4xl font-bold text-pink-500 mb-4">אופס! הדף לא נמצא</h1>
-                    <p className="text-xl text-gray-600 mb-6">
-                        נראה שנאבדת קצת... אבל אל דאגה, יש לנו הרבה דברים יפים להראות לך!
-                    </p>
-                    <Link
-                        to="/"
-                        className="inline-flex items-center px-6 py-3 bg-pink-500 text-white font-semibold rounded-full hover:bg-pink-600 transition duration-300"
-                    >
-                        <Home className="mr-2" size={20}/>
-                        חזרה לדף הבית
-                    </Link>
-                </div>
+        <div
+            dir="rtl"
+            className="min-h-screen flex items-center justify-center p-6 font-primary bg-background text-text"
+        >
+            <Helmet>
+                <title>404 - הדף לא נמצא | רותם יפרח - אמנית איפור</title>
+            </Helmet>
+            <div className="card-elegant animate-fade-in-up text-center max-w-[28rem] py-10 px-8 shadow-elegant rounded-sm">
+                <h1 className="font-secondary text-heading text-primary mb-4">
+                    אופס! הדף לא נמצא
+                </h1>
+                <div className="divider-elegant mb-6" aria-hidden="true" />
+                <p className="text-text-light text-[1.0625rem] mb-7 leading-relaxed">
+                    נראה שהתבלבלת קצת... אבל אל דאגה, יש לנו הרבה דברים יפים להראות לך!
+                </p>
+                <Link
+                    to="/"
+                    className="btn-luxury btn-luxury-primary no-underline"
+                >
+                    חזרה לדף הבית
+                </Link>
             </div>
-            <Footer/>
-        </main>
-    )
-        ;
+        </div>
+    );
 };
 
 export default NotFound;
