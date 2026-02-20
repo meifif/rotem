@@ -4,16 +4,27 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { fetchMainSlideImages, hasRemoteMainSlideSource } from '../config/imageSource';
+
+function getLocalMainSlideImages() {
+    const importAll = (r) => r.keys().map(r);
+    const imageContext = require.context('../assets/main-slide', false, /\.(png|jpe?g|svg)$/);
+    return importAll(imageContext);
+}
 
 const WorkSlider = () => {
     const [images, setImages] = useState([]);
 
     useEffect(() => {
-        const importAll = (r) => r.keys().map(r);
         const loadImages = async () => {
-            const imageContextBM = require.context('../assets/main-slide', false, /\.(png|jpe?g|svg)$/);
-            const loadedImages = importAll(imageContextBM);
-            setImages(loadedImages);
+            if (hasRemoteMainSlideSource()) {
+                const remote = await fetchMainSlideImages();
+                if (remote.length > 0) {
+                    setImages(remote);
+                    return;
+                }
+            }
+            setImages(getLocalMainSlideImages());
         };
         loadImages();
     }, []);

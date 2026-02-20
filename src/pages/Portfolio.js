@@ -5,8 +5,15 @@ import Navbar from "../sections/Navbar";
 import Footer from "../sections/Footer";
 import Modal from 'react-modal';
 import { X, ArrowLeft, ArrowRight } from 'lucide-react';
+import { fetchPortfolioImages, hasRemotePortfolioSource } from '../config/imageSource';
 
 Modal.setAppElement('#root');
+
+function getLocalPortfolioImages() {
+    const importAll = (r) => r.keys().map(r);
+    const imageContext = require.context('../assets/portfolio', false, /\.(png|jpe?g|svg)$/);
+    return importAll(imageContext);
+}
 
 const Portfolio = () => {
     const [images, setImages] = useState([]);
@@ -14,11 +21,15 @@ const Portfolio = () => {
     const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
     useEffect(() => {
-        const importAll = (r) => r.keys().map(r);
         const loadImages = async () => {
-            const imageContext = require.context('../assets/portfolio', false, /\.(png|jpe?g|svg)$/);
-            const loadedImages = importAll(imageContext);
-            setImages(loadedImages);
+            if (hasRemotePortfolioSource()) {
+                const remote = await fetchPortfolioImages();
+                if (remote.length > 0) {
+                    setImages(remote);
+                    return;
+                }
+            }
+            setImages(getLocalPortfolioImages());
         };
         loadImages();
     }, []);
