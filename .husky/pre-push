@@ -9,13 +9,4 @@ npm run predeploy
 echo "Running deploy script..."
 npm run deploy
 
-echo "Staging all changes..."
-git add -A
-
-echo "Committing build (build prod)..."
-git commit -m "build prod" || true
-
-echo "Pushing..."
-git push --no-verify
-
 echo "Pre-push hook completed successfully!"
