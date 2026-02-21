@@ -73,19 +73,18 @@ const WorkSlider = () => {
                         <span className="w-12 h-px bg-secondary"></span>
                     </div>
                     <h2 className="font-secondary text-display text-primary mb-4">
-                        מעבודותיי האחרונות
-                    </h2>
+היופי שלכן                    </h2>
                     <p className="text-text-light max-w-2xl mx-auto">
                         הצצה לעולם היצירה שלי - כל פנים הן בד ייחודי
                     </p>
                 </div>
 
-                {/* Slider */}
+                {/* Slider - constrained on desktop so section isn't oversized and quality stays sharp */}
                 <div className="max-w-7xl mx-auto">
                     <Slider {...sliderSettings}>
                         {images.map((image, index) => (
                             <div key={index} className="px-2 md:px-4">
-                                <div className="relative overflow-hidden group">
+                                <div className="relative overflow-hidden group w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] mx-auto">
                                     {/* Decorative frame */}
                                     <div className="absolute -inset-2 border border-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                                     
@@ -93,7 +92,9 @@ const WorkSlider = () => {
                                         <img
                                             src={image}
                                             alt={`Rotem's Work ${index + 1}`}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                            className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                                            loading="lazy"
+                                            decoding="async"
                                         />
                                     </div>
                                     
