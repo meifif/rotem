@@ -67,7 +67,7 @@ const ContactCTA = () => {
                     </div>
 
                     {/* Promise text */}
-                    <p className="mt-10 text-white/50 text-sm">
+                    <p className="mt-10 text-white/70 text-sm">
                         אשמח לענות על כל שאלה ולתאם פגישת ייעוץ אישית
                     </p>
                 </div>

@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Instagram, Heart, MessageCircle } from 'lucide-react';
+
+const INSTAGRAM_IFRAME_TITLE = 'פוסטים אחרונים מאינסטגרם';
 
 const InstagramFeed = () => {
     const instagramHandle = 'makeupbyrotemi';
     const instagramUrl = `https://www.instagram.com/${instagramHandle}/`;
     const [scriptLoaded, setScriptLoaded] = useState(false);
+    const embedContainerRef = useRef(null);
 
     useEffect(() => {
         // Load Instagram embed script
         if (!window.instgrm) {
             const script = document.createElement('script');
-            script.src = '//www.instagram.com/embed.js';
+            script.src = 'https://www.instagram.com/embed.js';
             script.async = true;
             script.onload = () => {
                 setScriptLoaded(true);
@@ -24,6 +27,22 @@ const InstagramFeed = () => {
             window.instgrm.Embeds.process();
         }
     }, []);
+
+    useEffect(() => {
+        if (!embedContainerRef.current) return;
+        const setIframeTitle = () => {
+            const iframe = embedContainerRef.current?.querySelector?.('iframe.instagram-media-rendered');
+            if (iframe && !iframe.getAttribute('title')) {
+                iframe.setAttribute('title', INSTAGRAM_IFRAME_TITLE);
+            }
+        };
+        const observer = new MutationObserver(() => {
+            setIframeTitle();
+        });
+        observer.observe(embedContainerRef.current, { childList: true, subtree: true });
+        setIframeTitle();
+        return () => observer.disconnect();
+    }, [scriptLoaded]);
 
     return (
         <section className="py-16 px-4 bg-gradient-to-b from-background to-primary/5">
@@ -112,7 +131,7 @@ const InstagramFeed = () => {
                 </div>
 
                 {/* Instagram Widget Placeholder */}
-                <div className="text-center">
+                <div className="text-center" ref={embedContainerRef}>
                     <div className="inline-block w-full max-w-4xl">
                         <blockquote 
                             className="instagram-media" 

@@ -97,12 +97,12 @@ const Footer = () => {
             <div className="border-t border-white/10">
                 <div className="container mx-auto px-6 lg:px-12 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p className="text-white/40 text-xs">
+                        <p className="text-white/70 text-xs">
                             © {currentYear} רותם יפרח - אמנית איפור. כל הזכויות שמורות.
                         </p>
                         <Link 
                             to="/accessibility" 
-                            className="text-white/40 hover:text-secondary transition-colors duration-300 text-xs"
+                            className="text-white/70 hover:text-secondary transition-colors duration-300 text-xs"
                         >
                             הצהרת נגישות
                         </Link>

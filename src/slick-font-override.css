@@ -1,0 +1,8 @@
+/* Override Slick carousel font to add font-display: swap for Lighthouse */
+@font-face {
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url('./assets/fonts/slick.woff') format('woff');
+}

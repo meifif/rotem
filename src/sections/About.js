@@ -23,6 +23,8 @@ const About = () => {
                                     src={rotemImage}
                                     alt="רותם יפרח - אמנית איפור"
                                     loading="lazy"
+                                    width={672}
+                                    height={1008}
                                     className="w-full aspect-[3/4] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
                                 />
                                 {/* Subtle overlay */}

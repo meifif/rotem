@@ -46,7 +46,10 @@ const RotemHome = () => {
                     <img
                         src="/logo.png"
                         alt="Rotem Ifrach Logo"
-                        className="w-56 h-56 mx-auto mb-6 opacity-90"
+                        className="w-56 h-56 mx-auto mb-6 opacity-90 object-contain"
+                        width={224}
+                        height={224}
+                        fetchPriority="high"
                     />
                 </div>
 
@@ -104,8 +107,10 @@ const RotemHome = () => {
 
             {/* Scroll indicator */}
             <button 
+                type="button"
                 onClick={scrollToWork}
                 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-secondary/60 hover:text-secondary transition-colors cursor-pointer animate-bounce"
+                aria-label="גלול לחלק הגלריה"
             >
                 <ChevronDown size={28} />
             </button>

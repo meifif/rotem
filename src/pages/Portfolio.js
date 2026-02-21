@@ -143,7 +143,7 @@ const Portfolio = () => {
                     )}
 
                     {/* Image counter */}
-                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/50 text-sm">
+                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm">
                         {selectedImageIndex !== null && `${selectedImageIndex + 1} / ${images.length}`}
                     </div>
                 </Modal>
