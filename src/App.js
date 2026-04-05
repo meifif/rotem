@@ -9,18 +9,16 @@ import FloatingContactButton from './components/FloatingContactButton';
 
 const App = () => {
     return (
-        <div id="root">
-            <Router>
-                <FloatingContactButton />
-                <ScrollToTop />
-                <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/accessibility" element={<AccessibilityDeclaration/>}/>
-                    <Route path="/portfolio" element={<Portfolio/>}/>
-                    <Route path="*" element={<NotFound/>}/>
-                </Routes>
-            </Router>
-        </div>
+        <Router>
+            <FloatingContactButton />
+            <ScrollToTop />
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/accessibility" element={<AccessibilityDeclaration/>}/>
+                <Route path="/portfolio" element={<Portfolio/>}/>
+                <Route path="*" element={<NotFound/>}/>
+            </Routes>
+        </Router>
     );
 };
 
