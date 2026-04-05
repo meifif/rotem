@@ -34,6 +34,26 @@ const SocialMediaSection = () => {
                     <path d="M15 9v6"></path>
                 </svg>
             )
+        },
+        {
+            href: "https://share.google/SxFJkuqGQvO8yS6pq",
+            label: "Google Site",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                    <text
+                        x="12"
+                        y="12"
+                        textAnchor="middle"
+                        dominantBaseline="central"
+                        fill="currentColor"
+                        fontSize="18"
+                        fontWeight="700"
+                        fontFamily="ui-sans-serif, system-ui, -apple-system, sans-serif"
+                    >
+                        G
+                    </text>
+                </svg>
+            )
         }
     ];
 
