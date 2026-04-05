@@ -19,6 +19,7 @@ const Navbar = () => {
         {href: '/#about', label: 'אודות'},
         {href: '/#services', label: 'שירותים'},
         {href: '/#brands', label: 'לקנות איתי'},
+        {href: '/#testimonials', label: 'ביקורות'},
         {to: '/portfolio', label: 'תיק עבודות'},
     ];
 

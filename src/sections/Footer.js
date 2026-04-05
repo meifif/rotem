@@ -51,6 +51,12 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
+                                <a href="/#testimonials"
+                                   className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                                    ביקורות
+                                </a>
+                            </li>
+                            <li>
                                 <Link to="/portfolio"
                                       className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                                     תיק עבודות

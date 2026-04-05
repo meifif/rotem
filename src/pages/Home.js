@@ -10,6 +10,7 @@ import WorkSlider from "../sections/WorkSlider";
 import BrandPartners from "../sections/BrandPartners";
 import ContactCTA from "../sections/ContactCTA";
 import InstagramFeed from "../sections/InstagramFeed";
+import Testimonials from "../sections/Testimonials";
 
 const Home = () => {
     return (
@@ -30,6 +31,9 @@ const Home = () => {
                 </section>
                 <section id="brands">
                     <BrandPartners />
+                </section>
+                <section id="testimonials">
+                    <Testimonials />
                 </section>
                 <section id="instagram">
                     <InstagramFeed />
