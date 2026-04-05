@@ -21,15 +21,19 @@ function buildCloudinaryUrl(publicId, version, format) {
   return `https://res.cloudinary.com/${cloudName}/image/upload/${v}${publicId}.${ext}`;
 }
 
-async function fetchCloudinaryList(tag) {
+async function fetchCloudinaryList(tag, { newestFirst = false } = {}) {
   if (!cloudName) return null;
   const url = `https://res.cloudinary.com/${cloudName}/image/list/${encodeURIComponent(tag)}.json`;
   const res = await fetch(url);
   if (!res.ok) return null;
   const data = await res.json();
   const resources = data?.resources || [];
-  return resources
-    .sort((a, b) => new Date(a.created_at || 0) - new Date(b.created_at || 0))
+  const byCreated = (a, b) =>
+    new Date(a.created_at || 0) - new Date(b.created_at || 0);
+  const ordered = newestFirst
+    ? [...resources].sort((a, b) => byCreated(b, a))
+    : [...resources].sort(byCreated);
+  return ordered
     .map((r) => buildCloudinaryUrl(r.public_id, r.version, r.format))
     .filter(Boolean);
 }
@@ -44,7 +48,7 @@ async function fetchJsonUrl(url) {
 
 export async function fetchPortfolioImages() {
   if (cloudName) {
-    const urls = await fetchCloudinaryList(portfolioTag);
+    const urls = await fetchCloudinaryList(portfolioTag, { newestFirst: true });
     if (Array.isArray(urls) && urls.length) return urls;
   }
   if (portfolioJsonUrl) {
