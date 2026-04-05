@@ -28,4 +28,5 @@ Set `REACT_APP_PORTFOLIO_IMAGES_URL` and/or `REACT_APP_MAINSLIDE_IMAGES_URL` to 
 
 ### Fallback
 
-If Cloudinary and JSON URLs are not set, the site uses the images in `src/assets/portfolio` and `src/assets/main-slide`.
+- **Portfolio**: Cloudinary or `REACT_APP_PORTFOLIO_IMAGES_URL` only. If neither is configured or the list is empty, the portfolio page shows no images.
+- **Main slider**: If Cloudinary and `REACT_APP_MAINSLIDE_IMAGES_URL` are not set, the site uses bundled images in `src/assets/main-slide`.

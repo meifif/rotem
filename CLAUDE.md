@@ -28,17 +28,17 @@ src/
 ├── pages/             # Route-level components (Home, Portfolio, NotFound)
 ├── components/        # Reusable UI elements (ContactForm, Button, ScrollToTop)
 ├── config/            # Image source configuration (Cloudinary/JSON/local fallback)
-└── assets/            # Local images (fallback when Cloudinary not configured)
+└── assets/            # Fonts; main-slide images (local fallback for homepage slider only)
 ```
 
 ## Key Technical Patterns
 
 **Styling**: Tailwind CSS with custom theme in `tailwind.config.js`. Colors use CSS variables (`--color-primary`, etc.) defined in `index.css`.
 
-**Image Management** (3-tier fallback in `src/config/imageSource.js`):
-1. Cloudinary (primary) - images tagged with folder names
-2. JSON URLs (secondary) - custom endpoints
-3. Local assets (tertiary) - `src/assets/` directories
+**Image Management** (`src/config/imageSource.js`):
+- **Portfolio page**: Cloudinary (tag from `REACT_APP_PORTFOLIO_DIR`) or `REACT_APP_PORTFOLIO_IMAGES_URL` only — no local bundle.
+- **Main slider**: Cloudinary → JSON URL → local files in `src/assets/main-slide`.
+- **Service / About galleries**: Cloudinary tags matching former `src/img` folder names (no local fallback).
 
 **Routing**: React Router v6 with BrowserRouter. Custom 404 handling via build script.
 
