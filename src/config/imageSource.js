@@ -22,9 +22,19 @@ function buildCloudinaryUrl(publicId, version, format) {
   return `https://res.cloudinary.com/${cloudName}/image/upload/${v}${publicId}.${ext}`;
 }
 
+/** Fisher–Yates shuffle; returns a new array. */
+function shuffleArray(items) {
+  const arr = [...items];
+  for (let i = arr.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 async function fetchCloudinaryList(
   tag,
-  { newestFirst = false, sortByPublicId = false } = {},
+  { newestFirst = false, sortByPublicId = false, randomOrder = false } = {},
 ) {
   if (!cloudName) return null;
   const url = `https://res.cloudinary.com/${cloudName}/image/list/${encodeURIComponent(tag)}.json`;
@@ -40,6 +50,8 @@ async function fetchCloudinaryList(
         sensitivity: 'base',
       }),
     );
+  } else if (randomOrder) {
+    ordered = shuffleArray(resources);
   } else {
     const byCreated = (a, b) =>
       new Date(a.created_at || 0) - new Date(b.created_at || 0);
@@ -62,12 +74,12 @@ async function fetchJsonUrl(url) {
 
 export async function fetchPortfolioImages() {
   if (cloudName) {
-    const urls = await fetchCloudinaryList(portfolioTag, { newestFirst: true });
+    const urls = await fetchCloudinaryList(portfolioTag, { randomOrder: true });
     if (Array.isArray(urls) && urls.length) return urls;
   }
   if (portfolioJsonUrl) {
     const urls = await fetchJsonUrl(portfolioJsonUrl);
-    if (Array.isArray(urls) && urls.length) return urls;
+    if (Array.isArray(urls) && urls.length) return shuffleArray(urls);
   }
   return [];
 }
