@@ -43,7 +43,7 @@ const BrandPartners = () => {
                         <span className="w-12 h-px bg-secondary"></span>
                     </div>
                     <h2 className="font-secondary text-display text-primary mb-4">
-                        החנות שלי
+                        לקנות איתי
                     </h2>
                     <p className="text-text-light text-lg">
                         את לא צריכה לבחור בין מותגים מובילים לשירות אישי. בואי לייעוץ חינם – נמצא יחד בדיוק מה מתאים לך,

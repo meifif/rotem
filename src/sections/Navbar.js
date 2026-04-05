@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import React, {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
+import {Menu, X} from 'lucide-react';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -15,18 +15,18 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { href: '/#home', label: 'בית' },
-        { href: '/#about', label: 'אודות' },
-        { href: '/#services', label: 'שירותים' },
-        { href: '/#brands', label: 'החנות שלי' },
-        { to: '/portfolio', label: 'תיק עבודות' },
+        {href: '/#home', label: 'בית'},
+        {href: '/#about', label: 'אודות'},
+        {href: '/#services', label: 'שירותים'},
+        {href: '/#brands', label: 'לקנות איתי'},
+        {to: '/portfolio', label: 'תיק עבודות'},
     ];
 
     return (
-        <nav 
+        <nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-                isScrolled 
-                    ? 'bg-white/95 backdrop-blur-md shadow-elegant py-4' 
+                isScrolled
+                    ? 'bg-white/95 backdrop-blur-md shadow-elegant py-4'
                     : 'bg-transparent py-6'
             }`}
         >
@@ -34,12 +34,14 @@ const Navbar = () => {
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <a href="/#home" className="relative group">
-                        <span className={`font-secondary text-2xl md:text-3xl font-medium tracking-wide transition-colors duration-300 ${
-                            isScrolled ? 'text-primary' : 'text-primary'
-                        }`}>
+                        <span
+                            className={`font-secondary text-2xl md:text-3xl font-medium tracking-wide transition-colors duration-300 ${
+                                isScrolled ? 'text-primary' : 'text-primary'
+                            }`}>
                             רותם יפרח
                         </span>
-                        <span className="block h-0.5 w-0 group-hover:w-full bg-secondary transition-all duration-300"></span>
+                        <span
+                            className="block h-0.5 w-0 group-hover:w-full bg-secondary transition-all duration-300"></span>
                     </a>
 
                     {/* Desktop Navigation */}
@@ -47,24 +49,26 @@ const Navbar = () => {
                         {navLinks.map((link, index) => (
                             <li key={index}>
                                 {link.to ? (
-                                    <Link 
+                                    <Link
                                         to={link.to}
                                         className={`relative font-primary text-sm tracking-luxury uppercase transition-colors duration-300 group ${
                                             isScrolled ? 'text-text hover:text-secondary' : 'text-text hover:text-secondary'
                                         }`}
                                     >
                                         {link.label}
-                                        <span className="absolute -bottom-1 left-0 w-0 h-px bg-secondary transition-all duration-300 group-hover:w-full"></span>
+                                        <span
+                                            className="absolute -bottom-1 left-0 w-0 h-px bg-secondary transition-all duration-300 group-hover:w-full"></span>
                                     </Link>
                                 ) : (
-                                    <a 
+                                    <a
                                         href={link.href}
                                         className={`relative font-primary text-sm tracking-luxury uppercase transition-colors duration-300 group ${
                                             isScrolled ? 'text-text hover:text-secondary' : 'text-text hover:text-secondary'
                                         }`}
                                     >
                                         {link.label}
-                                        <span className="absolute -bottom-1 left-0 w-0 h-px bg-secondary transition-all duration-300 group-hover:w-full"></span>
+                                        <span
+                                            className="absolute -bottom-1 left-0 w-0 h-px bg-secondary transition-all duration-300 group-hover:w-full"></span>
                                     </a>
                                 )}
                             </li>
@@ -72,9 +76,9 @@ const Navbar = () => {
                     </ul>
 
                     {/* CTA Button */}
-                    <a 
-                        href="https://wa.link/u26l5v" 
-                        target="_blank" 
+                    <a
+                        href="https://wa.link/u26l5v"
+                        target="_blank"
                         rel="noreferrer"
                         className="hidden md:inline-flex items-center px-6 py-2.5 bg-secondary text-white text-xs tracking-widest uppercase font-medium hover:bg-accent transition-all duration-300 hover:shadow-gold"
                     >
@@ -82,11 +86,11 @@ const Navbar = () => {
                     </a>
 
                     {/* Mobile Menu Button */}
-                    <button 
+                    <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className="md:hidden p-2 text-primary hover:text-secondary transition-colors"
                     >
-                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        {isMobileMenuOpen ? <X size={24}/> : <Menu size={24}/>}
                     </button>
                 </div>
 
@@ -99,7 +103,7 @@ const Navbar = () => {
                             {navLinks.map((link, index) => (
                                 <li key={index}>
                                     {link.to ? (
-                                        <Link 
+                                        <Link
                                             to={link.to}
                                             onClick={() => setIsMobileMenuOpen(false)}
                                             className="font-primary text-sm tracking-luxury uppercase text-text hover:text-secondary transition-colors duration-300"
@@ -107,7 +111,7 @@ const Navbar = () => {
                                             {link.label}
                                         </Link>
                                     ) : (
-                                        <a 
+                                        <a
                                             href={link.href}
                                             onClick={() => setIsMobileMenuOpen(false)}
                                             className="font-primary text-sm tracking-luxury uppercase text-text hover:text-secondary transition-colors duration-300"
@@ -118,9 +122,9 @@ const Navbar = () => {
                                 </li>
                             ))}
                             <li className="pt-4">
-                                <a 
-                                    href="https://wa.link/u26l5v" 
-                                    target="_blank" 
+                                <a
+                                    href="https://wa.link/u26l5v"
+                                    target="_blank"
                                     rel="noreferrer"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className="inline-flex items-center px-8 py-3 bg-secondary text-white text-xs tracking-widest uppercase font-medium hover:bg-accent transition-all duration-300"

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {Mail, MapPin, Phone} from 'lucide-react';
 import SocialMediaSection from "./SocialMediaSection";
 import WhatsAppIcon from "../utile/WhatsAppIcon";
 
@@ -16,10 +16,10 @@ const Footer = () => {
                     <div className="lg:col-span-1">
                         <h3 className="font-secondary text-3xl text-white mb-4">רותם יפרח</h3>
                         <p className="text-white/60 text-sm leading-relaxed mb-6">
-                            אמנית איפור עם למעלה מעשר שנות ניסיון. 
+                            אמנית איפור עם למעלה מעשר שנות ניסיון.
                             איפור כלות, אירועים, ועיצוב גבות עם תשומת לב לכל פרט.
                         </p>
-                        <SocialMediaSection />
+                        <SocialMediaSection/>
                     </div>
 
                     {/* Quick links */}
@@ -27,27 +27,32 @@ const Footer = () => {
                         <h4 className="text-xs tracking-widest uppercase text-secondary mb-6">ניווט מהיר</h4>
                         <ul className="space-y-3">
                             <li>
-                                <a href="/#home" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                                <a href="/#home"
+                                   className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                                     בית
                                 </a>
                             </li>
                             <li>
-                                <a href="/#about" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                                <a href="/#about"
+                                   className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                                     אודות
                                 </a>
                             </li>
                             <li>
-                                <a href="/#services" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                                <a href="/#services"
+                                   className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                                     שירותים
                                 </a>
                             </li>
                             <li>
-                                <a href="/#brands" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
-                                    החנות שלי
+                                <a href="/#brands"
+                                   className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                                    לקנות איתי
                                 </a>
                             </li>
                             <li>
-                                <Link to="/portfolio" className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                                <Link to="/portfolio"
+                                      className="text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
                                     תיק עבודות
                                 </Link>
                             </li>
@@ -59,20 +64,23 @@ const Footer = () => {
                         <h4 className="text-xs tracking-widest uppercase text-secondary mb-6">צרו קשר</h4>
                         <ul className="space-y-4">
                             <li>
-                                <a href="tel:053-2509989" className="flex items-center gap-3 text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
-                                    <Phone className="w-4 h-4 text-secondary" />
+                                <a href="tel:053-2509989"
+                                   className="flex items-center gap-3 text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                                    <Phone className="w-4 h-4 text-secondary"/>
                                     053-2509989
                                 </a>
                             </li>
                             <li>
-                                <a href="mailto:rotemshuman@gmail.com" className="flex items-center gap-3 text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
-                                    <Mail className="w-4 h-4 text-secondary" />
+                                <a href="mailto:rotemshuman@gmail.com"
+                                   className="flex items-center gap-3 text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                                    <Mail className="w-4 h-4 text-secondary"/>
                                     rotemshuman@gmail.com
                                 </a>
                             </li>
                             <li>
-                                <a href="https://wa.link/j96v07" target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
-                                    <WhatsAppIcon className="w-4 h-4 text-secondary" />
+                                <a href="https://wa.link/j96v07" target="_blank" rel="noreferrer"
+                                   className="flex items-center gap-3 text-white/70 hover:text-secondary transition-colors duration-300 text-sm">
+                                    <WhatsAppIcon className="w-4 h-4 text-secondary"/>
                                     WhatsApp
                                 </a>
                             </li>
@@ -83,9 +91,9 @@ const Footer = () => {
                     <div>
                         <h4 className="text-xs tracking-widest uppercase text-secondary mb-6">כתובת</h4>
                         <div className="flex items-start gap-3 text-white/70 text-sm">
-                            <MapPin className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
+                            <MapPin className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0"/>
                             <address className="not-italic leading-relaxed">
-                                רחוב עוזי חיטמן<br />
+                                רחוב עוזי חיטמן<br/>
                                 חולון, ישראל
                             </address>
                         </div>
@@ -100,8 +108,8 @@ const Footer = () => {
                         <p className="text-white/70 text-xs">
                             © {currentYear} רותם יפרח - אמנית איפור. כל הזכויות שמורות.
                         </p>
-                        <Link 
-                            to="/accessibility" 
+                        <Link
+                            to="/accessibility"
                             className="text-white/70 hover:text-secondary transition-colors duration-300 text-xs"
                         >
                             הצהרת נגישות
