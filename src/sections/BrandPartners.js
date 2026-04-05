@@ -5,9 +5,9 @@ const BRANDS = [
     {
         name: 'Malu Wilz ישראל',
         tagline: 'איפור וטיפוח מקצועי גרמני',
-        description: 'מותג האיפור מס\' 1 בגרמניה – קאמופלאג\', מייקאפ, טיפוח ועוד.',
+        description: 'מותג האיפור מס\' 1 בגרמניה - קאמופלאג\', מייקאפ, טיפוח ועוד.',
         byAppointment: true,
-        appointmentText: 'מפיצה רשמית – מוזמנות להגיע לתיאום',
+        appointmentText: 'מפיצה רשמית - מוזמנות להגיע לתיאום',
     },
     {
         name: 'עדה לזורגן',
@@ -20,7 +20,7 @@ const BRANDS = [
         name: 'FOREVER ישראל',
         tagline: 'טיפוח העור באלוורה',
         url: 'https://flpil.co.il/?agent=86688',
-        description: 'מוצרי טיפוח עור ממותג האלוורה המוביל – ג\'לים, קרמים וטיפוח פנים. אצלי בהזמנה.',
+        description: 'מוצרי טיפוח עור ממותג האלוורה המוביל - ג\'לים, קרמים וטיפוח פנים. אצלי בהזמנה.',
     },
 ];
 
@@ -46,8 +46,8 @@ const BrandPartners = () => {
                         לקנות איתי
                     </h2>
                     <p className="text-text-light text-lg">
-                        את לא צריכה לבחור בין מותגים מובילים לשירות אישי. בואי לייעוץ חינם – נמצא יחד בדיוק מה מתאים לך,
-                        ואז תרכשי דרך הקישורים שלי בקלות ובביטחון ✨
+                        את לא צריכה לבחור בין מותגים מובילים לשירות אישי. בואי לייעוץ חינם - נמצא יחד בדיוק מה מתאים לך,
+                        ואפילו מחכה לך קוד קופון שלי ✨
                     </p>
                 </div>
 
@@ -77,7 +77,7 @@ const BrandPartners = () => {
                                     <>
                                         {brand.coupon && (
                                             <p className="text-sm mb-4">
-                                                <span className="text-text-light">קוד הנחה: </span>
+                                                <span className="text-text-light">קוד קופון שלי: </span>
                                                 <span
                                                     className="font-semibold text-secondary-strong bg-secondary/10 px-2 py-0.5 rounded">
                                                     {brand.coupon}
