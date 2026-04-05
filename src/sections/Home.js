@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, ChevronDown } from 'lucide-react';
 import WhatsAppIcon from "../utile/WhatsAppIcon";
+import heroPhoto from '../assets/152A9590.jpg';
 
 const RotemHome = () => {
     const services = [
@@ -34,23 +35,35 @@ const RotemHome = () => {
 
             {/* Main content */}
             <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24 pb-16">
+                {/* Logo */}
+                <div className="mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0s', animationFillMode: 'forwards' }}>
+                    <img
+                        src="/logo.png"
+                        alt="Rotem Ifrach Logo"
+                        className="w-28 h-28 mx-auto opacity-90 object-contain"
+                        width={112}
+                        height={112}
+                    />
+                </div>
+
                 {/* Elegant decorative element */}
-                <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in">
+                <div className="flex items-center justify-center gap-4 mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '0.15s', animationFillMode: 'forwards' }}>
                     <span className="w-12 h-px bg-secondary"></span>
                     <span className="text-secondary text-sm tracking-widest uppercase font-primary">אמנית איפור</span>
                     <span className="w-12 h-px bg-secondary"></span>
                 </div>
 
-                {/* Logo / Name */}
-                <div className="mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
-                    <img
-                        src="/logo.png"
-                        alt="Rotem Ifrach Logo"
-                        className="w-56 h-56 mx-auto mb-6 opacity-90 object-contain"
-                        width={224}
-                        height={224}
-                        fetchPriority="high"
-                    />
+                {/* Hero photo */}
+                <div className="mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.25s', animationFillMode: 'forwards' }}>
+                    <div className="mx-auto max-w-md w-full aspect-[3/4] overflow-hidden rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
+                        <img
+                            src={heroPhoto}
+                            alt="רותם יפרח, אמנית איפור, ליד שולחן האיפור"
+                            className="w-full h-full object-cover object-center"
+                            fetchPriority="high"
+                            decoding="async"
+                        />
+                    </div>
                 </div>
 
                 {/* Tagline */}
