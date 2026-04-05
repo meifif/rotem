@@ -1,12 +1,10 @@
 import React from 'react';
 import { Briefcase, Clock, Sparkles, Star } from 'lucide-react';
 import ServiceLayout from './shared/ServiceLayout';
-import a from '../../img/evening-makeup/a.jpg';
-import b from '../../img/evening-makeup/b.jpg';
-import c from '../../img/evening-makeup/c.jpg';
+import { useCloudinaryTaggedImages } from '../../hooks/useCloudinaryTaggedImages';
 
 const BusinessMakeup = () => {
-    const images = [a, b, c];
+    const images = useCloudinaryTaggedImages('evening-makeup', []);
 
     const description = [
         'איפור לסביבה עסקית דורש הבנה עדינה של איזון - בין מקצועיות לנשיות, בין נוכחות לעידון. הוא צריך להשדר ביטחון ואמינות, תוך שמירה על מראה טבעי ומעודן שמתאים לכל סביבה מקצועית.',

@@ -3,10 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import {Award, Book, Palette, Users} from 'lucide-react';
-
-// Import your images statically
-import image1 from '../../img/personal-makeup-workshop/image1.jpg';
-import image2 from '../../img/personal-makeup-workshop/image2.jpg';
+import { useCloudinaryTaggedImages } from '../../hooks/useCloudinaryTaggedImages';
 import CtaButton from "./shared/CtaButton";
 
 const FeatureItem = ({icon: Icon, title, description}) => (
@@ -22,7 +19,7 @@ const FeatureItem = ({icon: Icon, title, description}) => (
 );
 
 const PersonalMakeupWorkshop = () => {
-    const images = [image1, image2];
+    const images = useCloudinaryTaggedImages('personal-makeup-workshop', []);
 
     const sliderSettings = {
         dots: true,

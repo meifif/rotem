@@ -1,11 +1,10 @@
 import React from 'react';
 import { Book, Clock, Star, User } from 'lucide-react';
 import ServiceLayout from './shared/ServiceLayout';
-import image1 from '../../img/personal-makeup-workshop/image1.jpg';
-import image2 from '../../img/personal-makeup-workshop/image2.jpg';
+import { useCloudinaryTaggedImages } from '../../hooks/useCloudinaryTaggedImages';
 
 const PersonalWorkshop = () => {
-    const images = [image1, image2];
+    const images = useCloudinaryTaggedImages('personal-makeup-workshop', []);
 
     const description = [
         'סדנת איפור אישית היא השקעה בידע שיישאר אתך לתמיד. במהלך פגישה אינטימית וממוקדת, אני מעבירה אליך את הידע המקצועי שצברתי בשנים, ומתאימה אותו במיוחד לצרכים שלך.',

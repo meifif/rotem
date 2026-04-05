@@ -1,7 +1,10 @@
 import React from 'react';
-import rotemImage from '../img/profile.jpg';
+import { useCloudinaryTaggedImages } from '../hooks/useCloudinaryTaggedImages';
 
 const About = () => {
+    const profileImages = useCloudinaryTaggedImages('profile', []);
+    const rotemSrc = profileImages[0];
+
     return (
         <section className="section-luxury bg-white relative overflow-hidden">
             {/* Decorative background elements */}
@@ -19,14 +22,21 @@ const About = () => {
 
                             {/* Main image */}
                             <div className="relative overflow-hidden">
-                                <img
-                                    src={rotemImage}
-                                    alt="רותם יפרח - אמנית איפור"
-                                    loading="lazy"
-                                    width={672}
-                                    height={1008}
-                                    className="w-full aspect-[3/4] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-                                />
+                                {rotemSrc ? (
+                                    <img
+                                        src={rotemSrc}
+                                        alt="רותם יפרח - אמנית איפור"
+                                        loading="lazy"
+                                        width={672}
+                                        height={1008}
+                                        className="w-full aspect-[3/4] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                                    />
+                                ) : (
+                                    <div
+                                        className="w-full aspect-[3/4] bg-background-alt animate-pulse"
+                                        aria-hidden
+                                    />
+                                )}
                                 {/* Subtle overlay */}
                                 <div
                                     className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>

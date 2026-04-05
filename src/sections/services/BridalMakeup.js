@@ -1,12 +1,10 @@
 import React from 'react';
 import { Clock, Heart, Sparkles, Star } from 'lucide-react';
 import ServiceLayout from './shared/ServiceLayout';
-import a from '../../img/bridal-makeup/a.jpg';
-import b from '../../img/bridal-makeup/b.jpg';
-import d from '../../img/bridal-makeup/d.jpg';
+import { useCloudinaryTaggedImages } from '../../hooks/useCloudinaryTaggedImages';
 
 const BridalMakeup = () => {
-    const images = [a, b, d];
+    const images = useCloudinaryTaggedImages('bridal-makeup', []);
 
     const description = [
         'איפור כלות הוא יצירה אמנותית שמחייבת הבנה עמוקה של מבנה הפנים, גוון העור, והחזון האסתטי של היום המיוחד. אני משקיעה זמן בייעוץ מעמיק, בו אנו בוחרות יחד את פלטת הצבעים, רמת הדרמטיות, והאופן שבו האיפור ישתלב עם השמלה, התסרוקת והתכשיטים.',

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Book, Heart, Star, User } from 'lucide-react';
 import ServiceLayout from './shared/ServiceLayout';
-import a from '../../img/evening-makeup/a.jpg';
-import b from '../../img/evening-makeup/b.jpg';
-import c from '../../img/evening-makeup/c.jpg';
+import { useCloudinaryTaggedImages } from '../../hooks/useCloudinaryTaggedImages';
 
 const TeenMakeup = () => {
-    const images = [a, b, c];
+    const images = useCloudinaryTaggedImages('evening-makeup', []);
 
     const description = [
         'איפור לנערות הוא יותר מסתם טכניקה - זו חוויה של גילוי עצמי והעצמה. אני מבינה את הרגישות והצרכים המיוחדים של גיל ההתבגרות, ויוצרת איפור שמדגיש את היופי הטבעי מבלי להעמיס.',

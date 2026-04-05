@@ -1,12 +1,10 @@
 import React from 'react';
 import { Clock, Heart, Star, Users } from 'lucide-react';
 import ServiceLayout from './shared/ServiceLayout';
-import a from '../../img/evening-makeup/a.jpg';
-import b from '../../img/evening-makeup/b.jpg';
-import c from '../../img/evening-makeup/c.jpg';
+import { useCloudinaryTaggedImages } from '../../hooks/useCloudinaryTaggedImages';
 
 const GroupWorkshop = () => {
-    const images = [a, b, c];
+    const images = useCloudinaryTaggedImages('evening-makeup', []);
 
     const description = [
         'סדנת איפור קבוצתית היא חוויה מיוחדת המשלבת למידה איכותית עם אווירה אינטימית וחברתית. זו הזדמנות נהדרת לבלות עם חברות, לחגוג אירוע מיוחד, או ליצור חוויה משותפת עם הקולגות.',

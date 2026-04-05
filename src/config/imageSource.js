@@ -1,10 +1,11 @@
 /**
- * Remote image sources for portfolio and main-slide.
+ * Remote image sources for portfolio, main-slide, and service/about galleries.
  * Browser-only: uses Cloudinary's public list-by-tag API (no backend, no secrets).
  *
  * Setup:
  *   - REACT_APP_CLOUDINARY_CLOUD_NAME = your Cloudinary cloud name.
  *   - REACT_APP_PORTFOLIO_DIR / REACT_APP_MAINSLIDE_DIR = tag name for each gallery (default: portfolio, main-slide).
+ *   - Service pages use tags matching former src/img folder names (e.g. evening-makeup, bridal-makeup, profile).
  *   - In Cloudinary: Settings → Security → enable "Resource list". Tag images with those names.
  */
 
@@ -21,18 +22,31 @@ function buildCloudinaryUrl(publicId, version, format) {
   return `https://res.cloudinary.com/${cloudName}/image/upload/${v}${publicId}.${ext}`;
 }
 
-async function fetchCloudinaryList(tag, { newestFirst = false } = {}) {
+async function fetchCloudinaryList(
+  tag,
+  { newestFirst = false, sortByPublicId = false } = {},
+) {
   if (!cloudName) return null;
   const url = `https://res.cloudinary.com/${cloudName}/image/list/${encodeURIComponent(tag)}.json`;
   const res = await fetch(url);
   if (!res.ok) return null;
   const data = await res.json();
   const resources = data?.resources || [];
-  const byCreated = (a, b) =>
-    new Date(a.created_at || 0) - new Date(b.created_at || 0);
-  const ordered = newestFirst
-    ? [...resources].sort((a, b) => byCreated(b, a))
-    : [...resources].sort(byCreated);
+  let ordered;
+  if (sortByPublicId) {
+    ordered = [...resources].sort((a, b) =>
+      String(a.public_id || '').localeCompare(String(b.public_id || ''), undefined, {
+        numeric: true,
+        sensitivity: 'base',
+      }),
+    );
+  } else {
+    const byCreated = (a, b) =>
+      new Date(a.created_at || 0) - new Date(b.created_at || 0);
+    ordered = newestFirst
+      ? [...resources].sort((a, b) => byCreated(b, a))
+      : [...resources].sort(byCreated);
+  }
   return ordered
     .map((r) => buildCloudinaryUrl(r.public_id, r.version, r.format))
     .filter(Boolean);
@@ -76,4 +90,18 @@ export function hasRemotePortfolioSource() {
 
 export function hasRemoteMainSlideSource() {
   return !!(cloudName || mainSlideJsonUrl);
+}
+
+/**
+ * Load images tagged with `tag` in Cloudinary (same list API as portfolio / main-slide).
+ * Sorted by public_id so filenames like a/b/c stay in a predictable order.
+ */
+export async function fetchImagesByTag(tag, options = {}) {
+  if (!cloudName) return [];
+  try {
+    const urls = await fetchCloudinaryList(tag, { ...options, sortByPublicId: true });
+    return Array.isArray(urls) ? urls : [];
+  } catch {
+    return [];
+  }
 }

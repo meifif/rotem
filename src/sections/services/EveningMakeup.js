@@ -1,12 +1,10 @@
 import React from 'react';
 import { Clock, Eye, Palette, Star } from 'lucide-react';
 import ServiceLayout from './shared/ServiceLayout';
-import a from '../../img/evening-makeup/a.jpg';
-import b from '../../img/evening-makeup/b.jpg';
-import c from '../../img/evening-makeup/c.jpg';
+import { useCloudinaryTaggedImages } from '../../hooks/useCloudinaryTaggedImages';
 
 const EveningMakeup = () => {
-    const images = [a, b, c];
+    const images = useCloudinaryTaggedImages('evening-makeup', []);
 
     const description = [
         'איפור ערב הוא אומנות של איזון עדין - בין אלגנטיות לדרמטיות, בין נוכחות להבנה עצמית. בפגישת הייעוץ שלנו, אני לומדת את הסגנון האישי שלך, מבנה הפנים, וסוג האירוע - חתונה של חברה, ערב גאלה, או אירוע משפחתי חשוב.',

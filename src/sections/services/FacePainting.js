@@ -1,15 +1,10 @@
 import React from 'react';
 import { Heart, Palette, Sparkles, Star } from 'lucide-react';
 import ServiceLayout from './shared/ServiceLayout';
-import a from '../../img/face-painting/a.jpg';
-import b from '../../img/face-painting/b.jpg';
-import c from '../../img/face-painting/c.jpg';
-import d from '../../img/face-painting/d.jpg';
-import e from '../../img/face-painting/e.jpg';
-import f from '../../img/face-painting/f.jpg';
+import { useCloudinaryTaggedImages } from '../../hooks/useCloudinaryTaggedImages';
 
 const FacePainting = () => {
-    const images = [a, b, c, d, e, f];
+    const images = useCloudinaryTaggedImages('face-painting', []);
 
     const description = [
         'ציורי פנים הם אומנות קסומה שמעניקה לכל אירוע ילדים נופך מיוחד ואווירה חגיגית. אני מגיעה לימי הולדת, מסיבות, אירועי פורים, וחגיגות משפחתיות, ויוצרת לכל ילד ציור ייחודי שמעורר חיוכים ושמחה.',

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Clock, Heart, Scissors, Star } from 'lucide-react';
 import ServiceLayout from './shared/ServiceLayout';
-import image1 from '../../img/eyebrow/image1.png';
-import image2 from '../../img/eyebrow/image2.png';
-import image3 from '../../img/eyebrow/image3.png';
+import { useCloudinaryTaggedImages } from '../../hooks/useCloudinaryTaggedImages';
 
 const EyebrowStyling = () => {
-    const images = [image1, image2, image3];
+    const images = useCloudinaryTaggedImages('eyebrow', []);
 
     const description = [
         'עיצוב גבות הוא אומנות עדינה של סימטריה, פרופורציות, ותשומת לב לפרטים הקטנים ביותר. גבות מעוצבות בצורה נכונה יכולות לשנות לחלוטין את המבט, להדגיש את העיניים, ולהעניק למבנה הפנים הרמוניה טבעית.',

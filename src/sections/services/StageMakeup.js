@@ -1,12 +1,10 @@
 import React from 'react';
 import { Camera, Clock, Star, Video } from 'lucide-react';
 import ServiceLayout from './shared/ServiceLayout';
-import a from '../../img/evening-makeup/a.jpg';
-import b from '../../img/evening-makeup/b.jpg';
-import c from '../../img/evening-makeup/c.jpg';
+import { useCloudinaryTaggedImages } from '../../hooks/useCloudinaryTaggedImages';
 
 const StageMakeup = () => {
-    const images = [a, b, c];
+    const images = useCloudinaryTaggedImages('evening-makeup', []);
 
     const description = [
         'איפור לבמה וטלוויזיה הוא תחום מקצועי ייחודי שדורש הבנה עמוקה של תאורה, מצלמה, וזוויות צילום. זה איפור שצריך לעבוד בתנאים קשים - אורות חזקים, שעות ארוכות, וזוויות רבות - ולהישאר מושלם לאורך כל התקופה.',
