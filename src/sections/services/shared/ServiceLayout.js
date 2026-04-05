@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -25,27 +25,37 @@ const ServiceLayout = ({
     ctaLink,
     ctaText,
 }) => {
+    const sliderRef = useRef(null);
+
+    // Slick can measure 0 width or misplace the track on first paint (RTL, async image URLs).
+    // Refresh layout after mount / when the image list changes so the first slide is visible.
+    useLayoutEffect(() => {
+        if (!images?.length) return;
+        const inner = sliderRef.current?.innerSlider;
+        if (!inner?.onWindowResized) return;
+        let cancelled = false;
+        const id = requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                if (!cancelled) inner.onWindowResized();
+            });
+        });
+        return () => {
+            cancelled = true;
+            cancelAnimationFrame(id);
+        };
+    }, [images]);
+
     const sliderSettings = {
         dots: true,
         infinite: true,
+        rtl: true,
         speed: 800,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 4000,
-        centerMode: true,
-        centerPadding: '0',
         adaptiveHeight: false,
-        lazyLoad: 'ondemand',
         cssEase: 'cubic-bezier(0.4, 0, 0.2, 1)',
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    centerPadding: '0',
-                }
-            }
-        ]
     };
 
     return (
@@ -65,7 +75,7 @@ const ServiceLayout = ({
                 {images && images.length > 0 && (
                     <div className="mb-12">
                         <div className="max-w-2xl mx-auto">
-                            <Slider {...sliderSettings}>
+                            <Slider ref={sliderRef} {...sliderSettings}>
                                 {images.map((image, index) => (
                                     <div key={index} className="px-1">
                                         <div className="relative overflow-hidden bg-background-alt">
@@ -74,6 +84,13 @@ const ServiceLayout = ({
                                                     src={image}
                                                     alt={`${title} ${index + 1}`}
                                                     className="w-full h-full object-cover"
+                                                    decoding="async"
+                                                    onLoad={
+                                                        index === 0
+                                                            ? () =>
+                                                                  sliderRef.current?.innerSlider?.onWindowResized?.()
+                                                            : undefined
+                                                    }
                                                 />
                                             </div>
                                         </div>
