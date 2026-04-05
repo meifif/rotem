@@ -12,16 +12,10 @@ import {
     ZoomOut,
     RotateCcw,
 } from 'lucide-react';
-import { fetchPortfolioImages, hasRemotePortfolioSource } from '../config/imageSource';
+import { fetchPortfolioImages } from '../config/imageSource';
 
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 4;
-
-function getLocalPortfolioImages() {
-    const importAll = (r) => r.keys().map(r);
-    const imageContext = require.context('../assets/portfolio', false, /\.(png|jpe?g|svg)$/);
-    return importAll(imageContext);
-}
 
 function clamp(n, min, max) {
     return Math.min(max, Math.max(min, n));
@@ -43,17 +37,11 @@ const Portfolio = () => {
     useEffect(() => {
         const loadImages = async () => {
             try {
-                if (hasRemotePortfolioSource()) {
-                    const remote = await fetchPortfolioImages();
-                    if (remote.length > 0) {
-                        setImages(remote);
-                        return;
-                    }
-                }
+                const remote = await fetchPortfolioImages();
+                setImages(Array.isArray(remote) ? remote : []);
             } catch {
-                /* Remote list failed (network/CORS): use bundled assets */
+                setImages([]);
             }
-            setImages(getLocalPortfolioImages());
         };
         loadImages();
     }, []);
@@ -354,6 +342,11 @@ const Portfolio = () => {
 
                 <div className="section-luxury">
                     <div className="container mx-auto px-6 lg:px-12">
+                        {images.length === 0 ? (
+                            <p className="py-16 text-center text-text-light" role="status">
+                                אין תמונות להצגה כרגע.
+                            </p>
+                        ) : null}
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
                             {images.map((image, index) => (
                                 <button

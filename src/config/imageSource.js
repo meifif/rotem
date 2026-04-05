@@ -84,10 +84,6 @@ export async function fetchMainSlideImages() {
   return [];
 }
 
-export function hasRemotePortfolioSource() {
-  return !!(cloudName || portfolioJsonUrl);
-}
-
 export function hasRemoteMainSlideSource() {
   return !!(cloudName || mainSlideJsonUrl);
 }
