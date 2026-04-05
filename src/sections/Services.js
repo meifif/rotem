@@ -26,13 +26,13 @@ const ServiceButton = ({ title, icon: Icon, isActive, onClick }) => (
     <button
         className={`group flex flex-col items-center justify-center p-6 transition-all duration-500 ${
             isActive 
-                ? 'bg-secondary text-white shadow-gold' 
-                : 'bg-white text-text border border-border hover:border-secondary'
+                ? 'bg-secondary-strong text-white shadow-gold' 
+                : 'bg-white text-text border border-border hover:border-secondary-strong'
         }`}
         onClick={onClick}
     >
         <Icon className={`w-6 h-6 mb-3 transition-transform duration-300 group-hover:scale-110 ${
-            isActive ? 'text-white' : 'text-secondary'
+            isActive ? 'text-white' : 'text-secondary-strong'
         }`} />
         <span className="text-sm font-medium text-center leading-tight">{title}</span>
     </button>
@@ -95,7 +95,7 @@ const Services = () => {
                 <div className="text-center mb-16">
                     <div className="flex items-center justify-center gap-4 mb-6">
                         <span className="w-12 h-px bg-secondary"></span>
-                        <span className="text-secondary text-xs tracking-widest uppercase font-medium">שירותים</span>
+                        <span className="text-secondary-strong text-xs tracking-widest uppercase font-medium">שירותים</span>
                         <span className="w-12 h-px bg-secondary"></span>
                     </div>
                     <h2 className="font-secondary text-display text-primary mb-4">

@@ -52,7 +52,7 @@ const Navbar = () => {
                                     <Link
                                         to={link.to}
                                         className={`relative font-primary text-sm tracking-luxury uppercase transition-colors duration-300 group ${
-                                            isScrolled ? 'text-text hover:text-secondary' : 'text-text hover:text-secondary'
+                                            isScrolled ? 'text-text hover:text-secondary-strong' : 'text-text hover:text-secondary-strong'
                                         }`}
                                     >
                                         {link.label}
@@ -63,7 +63,7 @@ const Navbar = () => {
                                     <a
                                         href={link.href}
                                         className={`relative font-primary text-sm tracking-luxury uppercase transition-colors duration-300 group ${
-                                            isScrolled ? 'text-text hover:text-secondary' : 'text-text hover:text-secondary'
+                                            isScrolled ? 'text-text hover:text-secondary-strong' : 'text-text hover:text-secondary-strong'
                                         }`}
                                     >
                                         {link.label}
@@ -80,7 +80,7 @@ const Navbar = () => {
                         href="https://wa.link/u26l5v"
                         target="_blank"
                         rel="noreferrer"
-                        className="hidden md:inline-flex items-center px-6 py-2.5 bg-secondary text-white text-xs tracking-widest uppercase font-medium hover:bg-accent transition-all duration-300 hover:shadow-gold"
+                        className="hidden md:inline-flex items-center px-6 py-2.5 bg-secondary-strong text-white text-xs tracking-widest uppercase font-medium hover:bg-accent transition-all duration-300 hover:shadow-gold"
                     >
                         צרי קשר
                     </a>
@@ -88,7 +88,7 @@ const Navbar = () => {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="md:hidden p-2 text-primary hover:text-secondary transition-colors"
+                        className="md:hidden p-2 text-primary hover:text-secondary-strong transition-colors"
                     >
                         {isMobileMenuOpen ? <X size={24}/> : <Menu size={24}/>}
                     </button>
@@ -106,7 +106,7 @@ const Navbar = () => {
                                         <Link
                                             to={link.to}
                                             onClick={() => setIsMobileMenuOpen(false)}
-                                            className="font-primary text-sm tracking-luxury uppercase text-text hover:text-secondary transition-colors duration-300"
+                                            className="font-primary text-sm tracking-luxury uppercase text-text hover:text-secondary-strong transition-colors duration-300"
                                         >
                                             {link.label}
                                         </Link>
@@ -114,7 +114,7 @@ const Navbar = () => {
                                         <a
                                             href={link.href}
                                             onClick={() => setIsMobileMenuOpen(false)}
-                                            className="font-primary text-sm tracking-luxury uppercase text-text hover:text-secondary transition-colors duration-300"
+                                            className="font-primary text-sm tracking-luxury uppercase text-text hover:text-secondary-strong transition-colors duration-300"
                                         >
                                             {link.label}
                                         </a>
@@ -127,7 +127,7 @@ const Navbar = () => {
                                     target="_blank"
                                     rel="noreferrer"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="inline-flex items-center px-8 py-3 bg-secondary text-white text-xs tracking-widest uppercase font-medium hover:bg-accent transition-all duration-300"
+                                    className="inline-flex items-center px-8 py-3 bg-secondary-strong text-white text-xs tracking-widest uppercase font-medium hover:bg-accent transition-all duration-300"
                                 >
                                     צרי קשר
                                 </a>

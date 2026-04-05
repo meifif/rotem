@@ -39,7 +39,7 @@ const BrandPartners = () => {
                     <div className="flex items-center justify-center gap-4 mb-6">
                         <span className="w-12 h-px bg-secondary"></span>
                         <span
-                            className="text-secondary text-xs tracking-widest uppercase font-medium">מפיצה מורשית</span>
+                            className="text-secondary-strong text-xs tracking-widest uppercase font-medium">מפיצה מורשית</span>
                         <span className="w-12 h-px bg-secondary"></span>
                     </div>
                     <h2 className="font-secondary text-display text-primary mb-4">
@@ -57,20 +57,20 @@ const BrandPartners = () => {
                         const CardContent = () => (
                             <>
                                 <div
-                                    className="flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 text-secondary mb-5 group-hover/card:bg-secondary group-hover/card:text-white transition-colors duration-300">
+                                    className="flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 text-secondary-strong mb-5 group-hover/card:bg-secondary-strong group-hover/card:text-white transition-colors duration-300">
                                     <Sparkles className="w-5 h-5"/>
                                 </div>
-                                <h3 className="font-secondary text-xl text-primary mb-1 group-hover/card:text-secondary transition-colors duration-300">
+                                <h3 className="font-secondary text-xl text-primary mb-1 group-hover/card:text-secondary-strong transition-colors duration-300">
                                     {brand.name}
                                 </h3>
-                                <p className="text-secondary/90 text-sm font-medium mb-3">
+                                <p className="text-secondary-strong/95 text-sm font-medium mb-3">
                                     {brand.tagline}
                                 </p>
                                 <p className="text-text-light text-sm leading-relaxed mb-4 flex-1">
                                     {brand.description}
                                 </p>
                                 {brand.byAppointment ? (
-                                    <p className="text-sm font-medium text-secondary">
+                                    <p className="text-sm font-medium text-secondary-strong">
                                         {brand.appointmentText}
                                     </p>
                                 ) : (
@@ -79,13 +79,13 @@ const BrandPartners = () => {
                                             <p className="text-sm mb-4">
                                                 <span className="text-text-light">קוד הנחה: </span>
                                                 <span
-                                                    className="font-semibold text-secondary bg-secondary/10 px-2 py-0.5 rounded">
+                                                    className="font-semibold text-secondary-strong bg-secondary/10 px-2 py-0.5 rounded">
                                                     {brand.coupon}
                                                 </span>
                                             </p>
                                         )}
                                         <span
-                                            className="inline-flex items-center gap-2 text-secondary text-sm font-medium tracking-wide group-hover/card:gap-3 transition-all duration-300">
+                                            className="inline-flex items-center gap-2 text-secondary-strong text-sm font-medium tracking-wide group-hover/card:gap-3 transition-all duration-300">
                                             <span>לחנות</span>
                                             <ExternalLink className="w-4 h-4"/>
                                         </span>

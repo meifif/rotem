@@ -44,7 +44,7 @@ const About = () => {
 
                             {/* Experience badge */}
                             <div
-                                className="absolute -bottom-6 -left-6 bg-secondary text-white px-8 py-6 text-center shadow-gold">
+                                className="absolute -bottom-6 -left-6 bg-secondary-strong text-white px-8 py-6 text-center shadow-gold">
                                 <span className="block font-secondary text-4xl font-medium">10+</span>
                                 <span className="text-xs tracking-widest uppercase">שנות ניסיון</span>
                             </div>
@@ -56,7 +56,7 @@ const About = () => {
                         {/* Section label */}
                         <div className="flex items-center gap-4 mb-6">
                             <span className="w-12 h-px bg-secondary"></span>
-                            <span className="text-secondary text-xs tracking-widest uppercase font-medium">אודות</span>
+                            <span className="text-secondary-strong text-xs tracking-widest uppercase font-medium">אודות</span>
                         </div>
 
                         {/* Heading */}

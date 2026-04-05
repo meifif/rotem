@@ -7,7 +7,9 @@
     /* Elegant & Luxurious Color Palette */
     --color-primary: #1a1a1a; /* Deep charcoal */
     --color-primary-light: #2d2d2d;
-    --color-secondary: #c9a962; /* Champagne gold */
+    --color-secondary: #c9a962; /* Champagne gold — text/icons on dark, accents */
+    /* Darker gold for white text (buttons, badges) — WCAG AA vs #fff */
+    --color-secondary-strong: #8a6b2c;
     --color-secondary-light: #e8d5a3;
     --color-accent: #8b6f47; /* Warm bronze */
     --color-background: #faf8f5; /* Warm cream */
@@ -36,7 +38,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-secondary);
+    background: var(--color-secondary-strong);
     border-radius: 4px;
 }
 
@@ -111,13 +113,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-luxury-primary {
-    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+    background: linear-gradient(135deg, var(--color-secondary-strong) 0%, var(--color-accent) 100%);
     color: var(--color-white);
 }
 
 .btn-luxury-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 40px rgba(201, 169, 98, 0.3);
+    box-shadow: 0 10px 40px rgba(138, 107, 44, 0.35);
 }
 
 .btn-luxury-outline {
@@ -127,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-luxury-outline:hover {
-    background: var(--color-secondary);
+    background: var(--color-secondary-strong);
     color: var(--color-white);
 }
 
@@ -295,8 +297,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .input-elegant:focus {
     outline: none;
-    border-color: var(--color-secondary);
-    box-shadow: 0 0 0 3px rgba(201, 169, 98, 0.1);
+    border-color: var(--color-secondary-strong);
+    box-shadow: 0 0 0 3px rgba(138, 107, 44, 0.12);
 }
 
 .input-elegant::placeholder {
@@ -313,7 +315,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Selection styling */
 ::selection {
-    background: var(--color-secondary);
+    background: var(--color-secondary-strong);
     color: var(--color-white);
 }
 

@@ -34,7 +34,7 @@ const ScrollToTop = () => {
             {isVisible && (
                 <button
                     onClick={scrollToTop}
-                    className={`fixed bottom-8 right-8 p-3 rounded-full bg-secondary text-white shadow-lg
+                    className={`fixed bottom-8 right-8 p-3 rounded-full bg-secondary-strong text-white shadow-lg
                         hover:bg-accent transition-all duration-300 transform hover:scale-110 z-50
                         opacity-90 hover:opacity-100 hover:shadow-gold`}
                     aria-label="Scroll to top"

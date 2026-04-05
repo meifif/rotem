@@ -46,7 +46,7 @@ const ContactForm = ({ darkMode = false }) => {
     if (isSubmitted) {
         return (
             <div className="text-center py-12">
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 ${darkMode ? 'bg-secondary' : 'bg-secondary'}`}>
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-6 ${darkMode ? 'bg-secondary-strong' : 'bg-secondary-strong'}`}>
                     <Check className="w-8 h-8 text-white" />
                 </div>
                 <h3 className={`font-secondary text-2xl mb-3 ${darkMode ? 'text-white' : 'text-primary'}`}>
@@ -122,8 +122,8 @@ const ContactForm = ({ darkMode = false }) => {
                 disabled={isSubmitting}
                 className={`w-full inline-flex items-center justify-center gap-3 px-8 py-4 text-sm tracking-widest uppercase font-medium transition-all duration-500 ${
                     isSubmitting
-                        ? 'bg-secondary/50 cursor-not-allowed'
-                        : 'bg-secondary hover:bg-accent hover:shadow-gold'
+                        ? 'bg-secondary-strong/50 cursor-not-allowed'
+                        : 'bg-secondary-strong hover:bg-accent hover:shadow-gold'
                 } text-white`}
             >
                 {isSubmitting ? (

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Phone, ChevronDown } from 'lucide-react';
 import WhatsAppIcon from "../utile/WhatsAppIcon";
-import heroPhoto from '../assets/152A9590.jpg';
 
 const RotemHome = () => {
     const services = [
@@ -49,7 +48,7 @@ const RotemHome = () => {
                 {/* Elegant decorative element */}
                 <div className="flex items-center justify-center gap-4 mb-8 opacity-0 animate-fade-in" style={{ animationDelay: '0.15s', animationFillMode: 'forwards' }}>
                     <span className="w-12 h-px bg-secondary"></span>
-                    <span className="text-secondary text-sm tracking-widest uppercase font-primary">אמנית איפור</span>
+                    <span className="text-secondary-strong text-sm tracking-widest uppercase font-primary">אמנית איפור</span>
                     <span className="w-12 h-px bg-secondary"></span>
                 </div>
 
@@ -57,11 +56,13 @@ const RotemHome = () => {
                 <div className="mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.25s', animationFillMode: 'forwards' }}>
                     <div className="mx-auto max-w-md w-full aspect-[3/4] overflow-hidden rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
                         <img
-                            src={heroPhoto}
+                            src={`${process.env.PUBLIC_URL}/hero-home.jpg`}
                             alt="רותם יפרח, אמנית איפור, ליד שולחן האיפור"
                             className="w-full h-full object-cover object-center"
                             fetchPriority="high"
                             decoding="async"
+                            width={619}
+                            height={929}
                         />
                     </div>
                 </div>
@@ -93,14 +94,14 @@ const RotemHome = () => {
                         href="https://wa.link/u26l5v" 
                         target="_blank" 
                         rel="noreferrer" 
-                        className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-secondary text-white text-sm tracking-widest uppercase font-medium hover:bg-accent transition-all duration-500 hover:shadow-gold"
+                        className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-secondary-strong text-white text-sm tracking-widest uppercase font-medium hover:bg-accent transition-all duration-500 hover:shadow-gold"
                     >
                         <WhatsAppIcon className="w-5 h-5 transition-transform group-hover:scale-110" />
                         <span>קבעי פגישת ייעוץ</span>
                     </a>
                     <a 
                         href="tel:053-2509989" 
-                        className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-transparent text-primary border border-primary/20 text-sm tracking-widest uppercase font-medium hover:border-secondary hover:text-secondary transition-all duration-500"
+                        className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-transparent text-primary border border-primary/20 text-sm tracking-widest uppercase font-medium hover:border-secondary-strong hover:text-secondary-strong transition-all duration-500"
                     >
                         <Phone className="w-4 h-4 transition-transform group-hover:scale-110" />
                         <span>053-2509989</span>
@@ -122,7 +123,7 @@ const RotemHome = () => {
             <button 
                 type="button"
                 onClick={scrollToWork}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 text-secondary/60 hover:text-secondary transition-colors cursor-pointer animate-bounce"
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 text-secondary-strong/70 hover:text-secondary-strong transition-colors cursor-pointer animate-bounce"
                 aria-label="גלול לחלק הגלריה"
             >
                 <ChevronDown size={28} />

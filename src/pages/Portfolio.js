@@ -327,7 +327,7 @@ const Portfolio = () => {
                     <div className="container mx-auto px-6 lg:px-12">
                         <div className="flex items-center justify-center gap-4 mb-6">
                             <span className="w-12 h-px bg-secondary"></span>
-                            <span className="text-secondary text-xs tracking-widest uppercase font-medium">גלריה</span>
+                            <span className="text-secondary-strong text-xs tracking-widest uppercase font-medium">גלריה</span>
                             <span className="w-12 h-px bg-secondary"></span>
                         </div>
                         <h1 className="font-secondary text-display text-white mb-8">

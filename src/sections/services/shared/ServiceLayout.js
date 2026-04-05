@@ -7,7 +7,7 @@ import CtaButton from "./CtaButton";
 const FeatureItem = ({ icon: Icon, title, description }) => (
     <div className="flex items-start gap-4">
         <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center border border-secondary/30">
-            <Icon className="w-5 h-5 text-secondary" />
+            <Icon className="w-5 h-5 text-secondary-strong" />
         </div>
         <div>
             <h4 className="font-secondary text-lg text-primary mb-1">{title}</h4>

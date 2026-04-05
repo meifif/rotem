@@ -10,8 +10,8 @@ const Button = ({
     const baseStyles = "inline-flex items-center justify-center font-medium transition-all duration-500 tracking-wider uppercase";
     
     const variants = {
-        primary: "bg-secondary text-white hover:bg-accent hover:shadow-gold",
-        outline: "bg-transparent text-secondary border border-secondary hover:bg-secondary hover:text-white",
+        primary: "bg-secondary-strong text-white hover:bg-accent hover:shadow-gold",
+        outline: "bg-transparent text-secondary-strong border border-secondary-strong hover:bg-secondary-strong hover:text-white",
         dark: "bg-primary text-white hover:bg-primary-light",
         white: "bg-white text-primary hover:bg-background border border-border",
     };

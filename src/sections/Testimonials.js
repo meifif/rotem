@@ -45,7 +45,7 @@ const Testimonials = () => {
             <div className="text-center mb-16">
                 <div className="flex items-center justify-center gap-4 mb-6">
                     <span className="w-12 h-px bg-secondary"></span>
-                    <span className="text-secondary text-xs tracking-widest uppercase font-medium">המלצות</span>
+                    <span className="text-secondary-strong text-xs tracking-widest uppercase font-medium">המלצות</span>
                     <span className="w-12 h-px bg-secondary"></span>
                 </div>
                 <h2 className="font-secondary text-display text-primary mb-4">

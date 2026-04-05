@@ -19,7 +19,7 @@ const ContactCTA = () => {
                     {/* Section header */}
                     <div className="flex items-center justify-center gap-4 mb-8">
                         <span className="w-12 h-px bg-secondary"></span>
-                        <span className="text-secondary text-xs tracking-widest uppercase font-medium">צרי קשר</span>
+                        <span className="text-secondary-strong text-xs tracking-widest uppercase font-medium">צרי קשר</span>
                         <span className="w-12 h-px bg-secondary"></span>
                     </div>
 
@@ -41,7 +41,7 @@ const ContactCTA = () => {
                             href="https://wa.link/z9cg9x" 
                             target="_blank" 
                             rel="noreferrer"
-                            className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-secondary text-white text-sm tracking-widest uppercase font-medium hover:bg-secondary-light hover:text-primary transition-all duration-500 hover:shadow-gold w-full sm:w-auto"
+                            className="group inline-flex items-center justify-center gap-3 px-10 py-4 bg-secondary-strong text-white text-sm tracking-widest uppercase font-medium hover:bg-secondary-light hover:text-primary transition-all duration-500 hover:shadow-gold w-full sm:w-auto"
                         >
                             <WhatsAppIcon className="w-5 h-5" />
                             <span>בואי נדבר בוואטסאפ</span>

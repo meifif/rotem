@@ -8,6 +8,7 @@ module.exports = {
                 primary: 'var(--color-primary)',
                 'primary-light': 'var(--color-primary-light)',
                 secondary: 'var(--color-secondary)',
+                'secondary-strong': 'var(--color-secondary-strong)',
                 'secondary-light': 'var(--color-secondary-light)',
                 accent: 'var(--color-accent)',
                 background: 'var(--color-background)',
@@ -40,7 +41,7 @@ module.exports = {
             boxShadow: {
                 'elegant': '0 4px 20px rgba(0, 0, 0, 0.08)',
                 'elegant-lg': '0 10px 40px rgba(0, 0, 0, 0.1)',
-                'gold': '0 10px 40px rgba(201, 169, 98, 0.2)',
+                'gold': '0 10px 40px rgba(138, 107, 44, 0.22)',
             },
             animation: {
                 'fade-in-up': 'fadeInUp 0.8s ease forwards',

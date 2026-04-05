@@ -69,7 +69,7 @@ const WorkSlider = () => {
                 <div className="text-center mb-12 px-6">
                     <div className="flex items-center justify-center gap-4 mb-6">
                         <span className="w-12 h-px bg-secondary"></span>
-                        <span className="text-secondary text-xs tracking-widest uppercase font-medium">גלריה</span>
+                        <span className="text-secondary-strong text-xs tracking-widest uppercase font-medium">גלריה</span>
                         <span className="w-12 h-px bg-secondary"></span>
                     </div>
                     <h2 className="font-secondary text-display text-primary mb-4">
@@ -110,7 +110,7 @@ const WorkSlider = () => {
                 <div className="text-center mt-12 px-6">
                     <Link 
                         to="/portfolio" 
-                        className="group inline-flex items-center gap-3 text-secondary hover:text-accent transition-colors duration-300"
+                        className="group inline-flex items-center gap-3 text-secondary-strong hover:text-accent transition-colors duration-300"
                     >
                         <span className="text-sm tracking-widest uppercase font-medium">לתיק העבודות המלא</span>
                         <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
